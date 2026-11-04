@@ -1,0 +1,983 @@
+/* Layout styles: header, footer, reservation popup */
+
+/* Logo */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo:hover {
+  color: inherit;
+}
+
+.logo picture {
+  display: block;
+}
+
+.logo-img {
+  display: block;
+  width: auto;
+}
+
+/* Header wordmark: shrinks from 52px to about 42px once the header turns solid */
+.logo--header .logo-picture {
+  transform-origin: left center;
+  transition: scale 0.4s var(--ease);
+}
+
+.logo--header .logo-img {
+  height: 52px;
+  transition: rotate 0.6s cubic-bezier(0.34, 1.8, 0.64, 1);
+}
+
+.site-header.is-scrolled .logo--header .logo-picture {
+  scale: 0.81;
+}
+
+/* Small springy tilt on hover */
+.logo--header:hover .logo-img {
+  rotate: -3deg;
+}
+
+/* Header logo stays hidden only until its pop-in animation runs */
+.motion-ready .logo--header .logo-img {
+  opacity: 0;
+}
+
+/* Footer badge logo */
+.logo--footer .logo-img {
+  width: 140px;
+  height: auto;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-cream);
+  border-bottom: 1px solid transparent;
+  transition:
+    background-color 0.3s var(--ease),
+    border-color 0.3s var(--ease),
+    box-shadow 0.3s var(--ease);
+}
+
+/* Pages with a full-screen hero: transparent header until the page is scrolled */
+.has-hero .site-header:not(.is-scrolled) {
+  background-color: transparent;
+  border-bottom-color: transparent;
+  box-shadow: none;
+}
+
+.has-hero .site-header:not(.is-scrolled) .nav-link {
+  color: var(--color-cream);
+}
+
+.has-hero .site-header:not(.is-scrolled) .nav-link:hover {
+  color: var(--color-mustard);
+}
+
+.has-hero .site-header:not(.is-scrolled) .nav-link:not([aria-current="page"])::after {
+  background-color: var(--color-mustard);
+}
+
+.has-hero .site-header:not(.is-scrolled) .nav-toggle-bar {
+  background-color: var(--color-cream);
+}
+
+.site-header.is-scrolled {
+  background-color: var(--color-cream);
+  border-bottom-color: var(--color-rule);
+  box-shadow: 0 6px 18px rgba(43, 36, 32, 0.06);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  min-height: var(--header-height);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+/* Header navigation */
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  list-style: none;
+  padding: 0;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding-block: var(--space-2);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  color: var(--color-ink);
+  transition: color 0.3s var(--ease);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.2rem;
+  height: 1px;
+  background-color: var(--color-primary-light);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--duration) var(--ease);
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-link[aria-current="page"]::after {
+  background-color: var(--color-accent);
+  transform: scaleX(1);
+}
+
+/* Mobile menu button, hidden on desktop for now */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background-color: var(--color-ink);
+}
+
+/* Footer */
+.site-footer {
+  position: relative;
+  background-color: var(--color-primary);
+  color: var(--color-cream);
+  padding-top: var(--space-8);
+}
+
+.site-footer a {
+  color: var(--color-cream);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--color-mustard);
+}
+
+.site-footer :focus-visible {
+  outline-color: var(--color-cream);
+}
+
+/* Large slow tagline marquee at the top of the footer */
+.footer-marquee {
+  overflow: hidden;
+  margin-top: calc(var(--space-8) * -0.5);
+  margin-bottom: var(--space-7);
+  pointer-events: none;
+}
+
+.footer-marquee-track {
+  display: flex;
+  width: max-content;
+}
+
+.footer-marquee-group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  max-width: none;
+}
+
+.footer-marquee-item {
+  display: block;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 5.5rem;
+  line-height: 1.15;
+  white-space: nowrap;
+  color: rgba(245, 237, 216, 0.14);
+}
+
+.footer-marquee-star {
+  padding-inline: 0.6em;
+  font-size: 1.6rem;
+  font-style: normal;
+  vertical-align: 0.6em;
+  color: rgba(200, 148, 26, 0.35);
+}
+
+/* Mascot peeking over the footer's top edge. The clip hides everything below that edge. */
+.footer-mascot {
+  position: absolute;
+  bottom: 100%;
+  right: max(var(--container-padding), calc((100% - var(--container-width)) / 2 + var(--container-padding)));
+  z-index: 5;
+  width: 170px;
+}
+
+.footer-mascot-clip {
+  clip-path: inset(-80px -80px 0 -80px);
+}
+
+.footer-mascot-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  translate: 0 30%;
+  transform-origin: 50% 100%;
+}
+
+/* Speech bubble with three short lines, shown on hover */
+.footer-mascot-bubble {
+  position: absolute;
+  right: calc(100% - 10px);
+  bottom: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.6rem 0.95rem 0.65rem;
+  border-radius: 10px;
+  background-color: var(--color-primary);
+  white-space: nowrap;
+  color: var(--color-cream);
+  opacity: 0;
+  transform: translateY(6px) scale(0.85);
+  transform-origin: right bottom;
+  transition: opacity 0.25s ease, transform 0.35s cubic-bezier(0.34, 1.6, 0.64, 1);
+  pointer-events: none;
+}
+
+.footer-mascot-line {
+  display: block;
+  font-size: 0.75rem;
+  line-height: 1.3;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.25s ease, transform 0.3s ease;
+}
+
+.footer-mascot-line--main {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Lines appear one after another when the bubble opens */
+.footer-mascot.is-greeting .footer-mascot-line {
+  opacity: 1;
+  transform: none;
+}
+
+.footer-mascot.is-greeting .footer-mascot-line--sub {
+  opacity: 0.8;
+}
+
+.footer-mascot.is-greeting .footer-mascot-line:nth-child(1) {
+  transition-delay: 0.06s;
+}
+
+.footer-mascot.is-greeting .footer-mascot-line:nth-child(2) {
+  transition-delay: 0.14s;
+}
+
+.footer-mascot.is-greeting .footer-mascot-line:nth-child(3) {
+  transition-delay: 0.22s;
+}
+
+.footer-mascot-bubble::after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  bottom: 10px;
+  border-style: solid;
+  border-width: 6px 0 6px 8px;
+  border-color: transparent transparent transparent var(--color-primary);
+}
+
+.footer-mascot.is-greeting .footer-mascot-bubble {
+  opacity: 1;
+  transform: none;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.2fr;
+  gap: var(--space-8);
+  padding-bottom: var(--space-8);
+}
+
+.footer-tagline {
+  margin-top: var(--space-5);
+  max-width: 32ch;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: var(--fs-md);
+  line-height: 1.5;
+  color: var(--color-cream);
+}
+
+.footer-heading {
+  position: relative;
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-3);
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-cream);
+}
+
+/* Mustard rule under footer headings; drawn on scroll */
+.footer-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: rgba(200, 148, 26, 0.6);
+  transform: scaleX(var(--rule-scale, 1));
+  transform-origin: left center;
+}
+
+.footer-links {
+  display: grid;
+  gap: var(--space-2);
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links a {
+  font-size: var(--fs-sm);
+}
+
+.footer-contact {
+  display: grid;
+  gap: var(--space-4);
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+}
+
+.footer-contact-label {
+  display: block;
+  margin-bottom: 0.15rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: rgba(245, 237, 216, 0.7);
+}
+
+/* Social icons */
+.social-list {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  list-style: none;
+  padding: 0;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(245, 237, 216, 0.45);
+  transition:
+    border-color var(--duration) var(--ease),
+    color var(--duration) var(--ease);
+}
+
+.social-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.site-footer .social-link:hover {
+  border-color: var(--color-mustard);
+  color: var(--color-mustard);
+}
+
+/* Footer bottom bar */
+.footer-bottom {
+  border-top: 1px solid rgba(245, 237, 216, 0.2);
+}
+
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-block: var(--space-5);
+  font-size: var(--fs-xs);
+  color: rgba(245, 237, 216, 0.8);
+}
+
+.footer-bottom-inner p {
+  max-width: none;
+}
+
+.footer-motto {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: var(--fs-sm);
+  color: var(--color-cream);
+}
+
+/* Reservation popup */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5);
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    opacity 0.3s var(--ease),
+    visibility 0s linear 0.3s;
+}
+
+.modal.is-open {
+  visibility: visible;
+  opacity: 1;
+  transition:
+    opacity 0.3s var(--ease),
+    visibility 0s linear 0s;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-backdrop);
+}
+
+.modal-dialog {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  max-height: calc(100vh - 3rem);
+  overflow-y: auto;
+  padding: var(--space-7) var(--space-7) var(--space-6);
+  background-color: var(--color-cream-light);
+  border: 1px solid var(--color-mustard);
+  outline: 1px solid var(--color-rule);
+  outline-offset: -10px;
+  box-shadow: 0 24px 60px rgba(28, 23, 20, 0.28);
+  text-align: center;
+  transform: scale(0.96) translateY(8px);
+  transition: transform 0.3s var(--ease);
+}
+
+.modal.is-open .modal-dialog {
+  transform: scale(1) translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--color-ink-muted);
+  transition: color var(--duration) var(--ease);
+}
+
+.modal-close:hover {
+  color: var(--color-ink);
+}
+
+.modal-close svg {
+  width: 18px;
+  height: 18px;
+}
+
+.modal-dialog .eyebrow {
+  color: var(--color-accent);
+}
+
+.modal-title {
+  margin-top: var(--space-3);
+  font-size: var(--fs-xl);
+}
+
+.modal-text {
+  margin: var(--space-4) auto 0;
+  max-width: 34ch;
+  color: var(--color-ink-muted);
+}
+
+.modal-phone {
+  display: block;
+  margin-top: var(--space-6);
+  padding-block: var(--space-4);
+  border-top: 1px solid var(--color-rule);
+  border-bottom: 1px solid var(--color-rule);
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  color: var(--color-primary);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.modal-phone:hover {
+  color: var(--color-primary-light);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+.modal-actions .btn {
+  min-width: 10rem;
+}
+
+.modal-note {
+  margin: var(--space-5) auto 0;
+  font-size: var(--fs-xs);
+  color: var(--color-ink-muted);
+}
+
+/* Lock page scroll while popup is open */
+body.is-locked {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modal-dialog,
+  .modal.is-open .modal-dialog {
+    transform: none;
+  }
+
+  .logo--header:hover .logo-img {
+    rotate: none;
+  }
+
+  .footer-mascot-bubble {
+    display: none;
+  }
+
+  /* If the bubble is shown, all three lines appear at once */
+  .footer-mascot-line {
+    opacity: 1;
+    transform: none;
+    transition: none !important;
+  }
+
+  .footer-mascot-line--sub {
+    opacity: 0.8;
+  }
+}
+
+/* Elements that only exist on smaller screens */
+.mobile-menu {
+  display: none;
+}
+
+/* The call bar is mobile only */
+@media (min-width: 769px) {
+  .call-bar {
+    display: none;
+  }
+}
+
+/* Tablet and mobile */
+@media (max-width: 1024px) {
+  /* Header: logo and hamburger only */
+  .primary-nav,
+  .header-cta {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    position: relative;
+    z-index: 2;
+    margin-right: -10px;
+  }
+
+  .nav-toggle-bar {
+    transition: transform 0.35s var(--ease), opacity 0.2s ease, background-color 0.3s var(--ease);
+  }
+
+  /* Hamburger turns into a close (X) button */
+  .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+
+  .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) {
+    opacity: 0;
+  }
+
+  .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(4) {
+    transform: translateY(-6.5px) rotate(-45deg);
+  }
+
+  /* While the menu is open the header sits on the teal overlay */
+  .menu-open .site-header,
+  .menu-open .site-header.is-scrolled {
+    background-color: transparent;
+    border-bottom-color: transparent;
+    box-shadow: none;
+  }
+
+  .menu-open .nav-toggle-bar {
+    background-color: var(--color-cream);
+  }
+
+  /* Lock scrolling on the page root so the sticky header stays in place */
+  body.is-locked {
+    overflow: visible;
+  }
+
+  html.page-locked {
+    overflow: hidden;
+  }
+
+  /* Full-screen menu overlay */
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    display: flex;
+    overflow-y: auto;
+    background-color: var(--color-primary);
+    color: var(--color-cream);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.35s var(--ease), visibility 0s linear 0.35s;
+  }
+
+  .mobile-menu::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../assets/images/textures/paper-texture.jpg");
+    background-size: 640px auto;
+    mix-blend-mode: soft-light;
+    opacity: 0.25;
+    pointer-events: none;
+  }
+
+  .mobile-menu.is-open {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.35s var(--ease), visibility 0s linear 0s;
+  }
+
+  .mobile-menu-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    padding: calc(var(--header-height) + var(--space-5)) var(--container-padding) calc(var(--space-6) + env(safe-area-inset-bottom, 0px));
+  }
+
+  .mobile-menu-list {
+    display: grid;
+    gap: var(--space-2);
+    list-style: none;
+    padding: 0;
+  }
+
+  .mobile-menu-link {
+    display: flex;
+    align-items: center;
+    min-height: 56px;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-weight: 600;
+    font-size: clamp(2.1rem, 8vw, 3rem);
+    line-height: 1.1;
+    text-decoration: none;
+    color: var(--color-cream);
+  }
+
+  .mobile-menu-link:hover,
+  .mobile-menu-link:focus-visible {
+    color: var(--color-mustard);
+  }
+
+  /* Links, button and footer rise in one after another */
+  .mobile-menu-list li,
+  .mobile-menu-cta,
+  .mobile-menu-footer {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.45s var(--ease), transform 0.55s var(--ease);
+  }
+
+  .mobile-menu.is-open .mobile-menu-list li,
+  .mobile-menu.is-open .mobile-menu-cta,
+  .mobile-menu.is-open .mobile-menu-footer {
+    opacity: 1;
+    transform: none;
+  }
+
+  .mobile-menu.is-open .mobile-menu-list li:nth-child(1) { transition-delay: 0.08s; }
+  .mobile-menu.is-open .mobile-menu-list li:nth-child(2) { transition-delay: 0.14s; }
+  .mobile-menu.is-open .mobile-menu-list li:nth-child(3) { transition-delay: 0.2s; }
+  .mobile-menu.is-open .mobile-menu-list li:nth-child(4) { transition-delay: 0.26s; }
+  .mobile-menu.is-open .mobile-menu-list li:nth-child(5) { transition-delay: 0.32s; }
+  .mobile-menu.is-open .mobile-menu-cta { transition-delay: 0.4s; }
+  .mobile-menu.is-open .mobile-menu-footer { transition-delay: 0.46s; }
+
+  .mobile-menu-cta {
+    width: 100%;
+    margin-top: var(--space-6);
+  }
+
+  .mobile-menu-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    margin-top: auto;
+    padding-top: var(--space-6);
+    border-top: 1px solid rgba(200, 148, 26, 0.5);
+  }
+
+  .mobile-menu-phone {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.35rem;
+    text-decoration: none;
+    color: var(--color-cream);
+  }
+
+  .mobile-menu-social {
+    margin-top: 0;
+  }
+
+  .mobile-menu .social-link {
+    width: 44px;
+    height: 44px;
+    color: var(--color-cream);
+  }
+
+  .mobile-menu :focus-visible {
+    outline-color: var(--color-cream);
+  }
+
+  /* Footer: smaller mascot, bubble stays on screen to its left */
+  .footer-mascot {
+    right: var(--container-padding);
+    width: 130px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .logo--header .logo-img {
+    height: 44px;
+  }
+
+  /* Footer columns stack */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+  }
+
+  .logo--footer .logo-img {
+    width: 110px;
+  }
+
+  .footer-marquee-item {
+    font-size: 3rem;
+  }
+
+  .footer-marquee-star {
+    font-size: 1rem;
+  }
+
+  .footer-mascot {
+    width: 112px;
+  }
+
+  .footer-mascot-bubble {
+    bottom: 18px;
+    padding: 0.5rem 0.8rem 0.55rem;
+  }
+
+  .footer-links a,
+  .footer-contact a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-size: 1rem;
+  }
+
+  .footer-links {
+    gap: 0;
+  }
+
+  .footer-contact {
+    font-size: 1rem;
+  }
+
+  .social-link {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Bottom bar stacks; extra space so the call bar never covers it */
+  .footer-bottom-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+    padding-bottom: calc(var(--space-5) + 76px + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* Sticky call bar */
+  .call-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 80;
+    display: block;
+    padding: 0.6rem var(--container-padding) calc(0.6rem + env(safe-area-inset-bottom, 0px));
+    background-color: rgba(251, 247, 227, 0.96);
+    border-top: 1px solid var(--color-rule);
+    box-shadow: 0 -6px 18px rgba(43, 36, 32, 0.08);
+    transform: translateY(110%);
+    visibility: hidden;
+    transition: transform 0.4s var(--ease), visibility 0s linear 0.4s;
+  }
+
+  .call-bar.is-visible {
+    transform: none;
+    visibility: visible;
+    transition: transform 0.4s var(--ease), visibility 0s linear 0s;
+  }
+
+  /* Hidden while the menu or the reservation popup is open */
+  body.is-locked .call-bar {
+    transform: translateY(110%);
+    visibility: hidden;
+  }
+
+  .call-bar-btn {
+    width: 100%;
+    min-height: 52px;
+    letter-spacing: 0.1em;
+  }
+
+  .call-bar-btn svg {
+    flex: none;
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Reservation popup becomes a bottom sheet */
+  .modal {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .modal-dialog {
+    max-width: none;
+    max-height: 90vh;
+    padding: var(--space-7) var(--space-5) calc(var(--space-6) + env(safe-area-inset-bottom, 0px));
+    border: 0;
+    border-top: 1px solid var(--color-mustard);
+    border-radius: 18px 18px 0 0;
+    outline: 0;
+    transform: translateY(100%);
+    transition: transform 0.4s var(--ease);
+  }
+
+  .modal.is-open .modal-dialog {
+    transform: none;
+  }
+
+  .modal-close {
+    width: 44px;
+    height: 44px;
+  }
+
+  .modal-phone {
+    font-size: 1.9rem;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .modal-actions .btn {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .modal-actions .btn-primary {
+    min-height: 58px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 390px) {
+  .footer-mascot {
+    width: 100px;
+  }
+
+  .modal-phone {
+    font-size: 1.65rem;
+  }
+}
+
+/* Touch devices: no hover-only tilt on the logo */
+@media (hover: none) {
+  .logo--header:hover .logo-img {
+    rotate: none;
+  }
+}

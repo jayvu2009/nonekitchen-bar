@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>No Nê Kitchen &amp; Bar | Hanoi Comfort Food in Vancouver</title>
+  <meta name="description" content="No Nê Kitchen &amp; Bar serves Hanoi-style comfort food in a nostalgic bao cấp setting on Denman Street, Vancouver. Come hungry. Leave No Nê.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="No Nê Kitchen &amp; Bar">
+  <meta property="og:title" content="No Nê Kitchen &amp; Bar | Hanoi Comfort Food in Vancouver">
+  <meta property="og:description" content="Hanoi-style comfort food in a nostalgic bao cấp setting on Denman Street, Vancouver. Come hungry. Leave No Nê.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/logo/favicon.webp">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/images/logo/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/images/logo/favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&subset=vietnamese&display=swap">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/home.css">
+
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="assets/images/vintage/hanoi-street-painting.jpg">
+
+  <!-- Hide hero text before its intro animations, only when motion is allowed. Shows it again if the scripts fail to load. -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      if (!window.matchMedia || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      root.classList.add("motion-ready", "type-ready");
+      setTimeout(function () {
+        if (!window.gsap) root.classList.remove("motion-ready");
+        if (!window.noNeTypewriterStarted) root.classList.remove("type-ready");
+      }, 2500);
+    })();
+  </script>
+</head>
+<body class="has-hero">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress-bar"></span></div>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="logo logo--header" href="index.html" aria-label="No Nê Kitchen &amp; Bar, home">
+        <picture class="logo-picture">
+          <source srcset="assets/images/logo/logo-wordmark.webp" type="image/webp">
+          <img class="logo-img" src="assets/images/logo/logo-wordmark.png" alt="No Nê Kitchen &amp; Bar" width="1000" height="539">
+        </picture>
+      </a>
+
+      <div class="header-actions">
+        <nav class="primary-nav" id="primary-nav" aria-label="Main">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="menu.html">Menu</a></li>
+            <li><a class="nav-link" href="our-story.html">Our Story</a></li>
+            <li><a class="nav-link" href="catering.html">Catering</a></li>
+            <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+            <li><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <button class="btn btn-primary header-cta" type="button" data-open-reservation>Reserve a Table</button>
+
+        <button class="nav-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="visually-hidden">Open menu</span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Full-screen mobile menu (tablet and mobile only) -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+      <nav class="mobile-menu-nav" aria-label="Main">
+        <ul class="mobile-menu-list">
+          <li><a class="mobile-menu-link" href="menu.html">Menu</a></li>
+          <li><a class="mobile-menu-link" href="our-story.html">Our Story</a></li>
+          <li><a class="mobile-menu-link" href="catering.html">Catering</a></li>
+          <li><a class="mobile-menu-link" href="gallery.html">Gallery</a></li>
+          <li><a class="mobile-menu-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn btn-secondary mobile-menu-cta" type="button" data-open-reservation>Reserve a Table</button>
+
+      <div class="mobile-menu-footer">
+        <a class="mobile-menu-phone" href="tel:+16046320022">(604) 632-0022</a>
+        <ul class="social-list mobile-menu-social">
+          <li>
+            <a class="social-link" href="https://www.instagram.com/nonekitchenandbar/" target="_blank" rel="noopener" aria-label="Instagram (opens in a new tab)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false">
+                <rect x="3" y="3" width="18" height="18" rx="5"/>
+                <circle cx="12" cy="12" r="4.2"/>
+                <circle cx="17.4" cy="6.6" r="0.9" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="social-link" href="https://www.facebook.com/61590321897593/" target="_blank" rel="noopener" aria-label="Facebook (opens in a new tab)">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M13.5 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H7.9v3h2.6V21h3z"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="social-link" href="https://www.tiktok.com/@nonekitchenandbar" target="_blank" rel="noopener" aria-label="TikTok (opens in a new tab)">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M16.6 3c.3 2.2 1.6 3.7 3.9 3.9v3.1c-1.4.1-2.7-.3-3.9-1.1v5.9c0 3.4-2.5 5.9-5.8 5.9-3.1 0-5.6-2.5-5.6-5.6 0-3.4 2.9-6 6.4-5.5v3.2c-1.6-.4-3.2.7-3.2 2.3 0 1.4 1.1 2.4 2.4 2.4 1.5 0 2.6-1.1 2.6-2.8V3h3.2z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <main id="main" tabindex="-1">
+
+    <!-- 01 Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <!-- Parallax wrapper; the painting inside keeps its own slow zoom -->
+      <div class="hero-parallax" aria-hidden="true">
+        <div class="hero-bg"></div>
+      </div>
+      <div class="hero-texture" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <p class="section-eyebrow hero-eyebrow" data-hero-item>
+          <span class="section-eyebrow-num">01 –</span>
+          <span>867 Denman Street · Vancouver</span>
+        </p>
+        <h1 class="hero-title" id="hero-title">
+          <span class="hero-line" data-hero-item>Come hungry.</span>
+          <!-- Typed out by js/main.js; the full text stays here for screen readers and no-JS -->
+          <span class="hero-line hero-line--type" data-typewriter><span class="hero-type-text">Leave <span class="hero-nene" lang="vi">No Nê</span>.</span></span>
+        </h1>
+        <p class="hero-text" data-hero-item>Hanoi comfort food served in a <span lang="vi">bao cấp</span>-era setting, where every bowl carries the warmth and memory of old Vietnam.</p>
+        <div class="hero-actions" data-hero-item>
+          <a class="btn btn-secondary" href="menu.html">Explore Our Menu <span aria-hidden="true">→</span></a>
+          <button class="btn btn-outline btn-outline-light" type="button" data-open-reservation>Reserve a Table</button>
+        </div>
+      </div>
+
+      <!-- Scroll indicator: chopsticks resting on a bowl -->
+      <a class="hero-scroll" href="#signature-dishes" data-scroll-indicator>
+        <span class="hero-scroll-bob">
+          <svg viewBox="0 0 48 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M6 20h36"/>
+            <path d="M8 20c1 9 7.5 15 16 15s15-6 16-15"/>
+            <path d="M18 35h12"/>
+            <path d="M10 15L44 5"/>
+            <path d="M12 18L45 10"/>
+          </svg>
+          <span class="hero-scroll-text">Scroll</span>
+        </span>
+        <span class="visually-hidden"> to Signature Dishes</span>
+      </a>
+    </section>
+
+    <!-- 02 Signature dishes -->
+    <section class="section dishes" id="signature-dishes" aria-labelledby="dishes-title">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="section-eyebrow">
+              <span class="section-eyebrow-num">02 –</span>
+              <span lang="vi">Từ bếp nhà</span>
+            </p>
+            <h2 class="section-title" id="dishes-title">Signature Dishes</h2>
+          </div>
+          <a class="text-link" href="menu.html">View Full Menu <span aria-hidden="true">→</span></a>
+        </div>
+
+        <ul class="dish-grid" role="list">
+          <li class="dish-card dish-card--featured" data-reveal-item>
+            <div class="print">
+              <div class="print-media print-media--tall">
+                <img src="assets/images/dishes/NoNeKitchenAndBar_Tung'sSignaturePanSearedBeefPho_2880x2304.jpg" alt="Tung's signature pan-seared beef pho in a blue-rimmed bowl, topped with herbs and green onions" width="2880" height="2304" loading="lazy">
+              </div>
+              <span class="stamp" lang="vi">Món đinh</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-meta">
+                <span class="dish-code">P1</span>
+                <span class="dish-price">$19.98</span>
+              </div>
+              <h3 class="dish-name-vi" lang="vi">Phở Bò Xào Lăn Ông Tùng</h3>
+              <p class="dish-name-en">Tung's Signature Pan-seared Beef Pho</p>
+              <p class="dish-desc">Hanoi-style beef noodle soup with wok-seared beef shank, green onions and garlic.</p>
+            </div>
+          </li>
+
+          <li class="dish-card" data-reveal-item>
+            <div class="print">
+              <div class="print-media print-media--landscape">
+                <img src="assets/images/dishes/NoNeKitchenAndBar_HanoiStyleGrilledPorkVermicelli_2880x2304.jpg" alt="Hanoi-style grilled pork and pork meatballs with vermicelli and fresh herbs" width="2880" height="2304" loading="lazy">
+              </div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-meta">
+                <span class="dish-code">V1</span>
+                <span class="dish-price">$21.98</span>
+              </div>
+              <h3 class="dish-name-vi" lang="vi">Bún Chả Hàng Mành</h3>
+              <p class="dish-name-en">Hanoi-style Grilled Pork Vermicelli</p>
+              <p class="dish-desc">Grilled pork and pork meatballs in No Nê chilli lime sauce, with vermicelli and fresh herbs.</p>
+            </div>
+          </li>
+
+          <li class="dish-card" data-reveal-item>
+            <div class="print">
+              <div class="print-media print-media--landscape">
+                <img src="assets/images/dishes/NoNeKitchenAndBar_NoodlesWithFermentedShrimpPasteAndTofu_2880x2304.jpg" alt="Vermicelli with fried tofu, pork and herbs, served with fermented shrimp paste" width="2880" height="2304" loading="lazy">
+              </div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-meta">
+                <span class="dish-code">V4</span>
+                <span class="dish-price">$26.98</span>
+              </div>
+              <h3 class="dish-name-vi" lang="vi">Bún Đậu Mắm Tôm Phát Lộc</h3>
+              <p class="dish-name-en">Noodles with Fermented Shrimp Paste &amp; Tofu</p>
+              <p class="dish-desc">Steamed pork hock, fried tofu and young rice cake with vermicelli, herbs and shrimp paste.</p>
+            </div>
+          </li>
+
+          <li class="dish-card" data-reveal-item>
+            <div class="print">
+              <div class="print-media print-media--landscape print-media--scene">
+                <img src="assets/images/dishes/NoNeKitchenAndBar_LegendaryStreetFoodPlatter.png" alt="Legendary street food platter with crispy fried corn, fried pork rolls, cucumber and fries on a checked cloth" width="668" height="514" loading="lazy">
+              </div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-meta">
+                <span class="dish-code">S4</span>
+                <span class="dish-price">$34.98</span>
+              </div>
+              <h3 class="dish-name-vi" lang="vi">Mẹt Ăn Vặt Thần Chưởng</h3>
+              <p class="dish-name-en">Legendary Street Food Platter</p>
+              <p class="dish-desc">A Vietnamese snack platter with crispy fried corn, fried pork rolls and buttered fries.</p>
+            </div>
+          </li>
+
+          <li class="dish-card" data-reveal-item>
+            <div class="print">
+              <div class="print-media print-media--landscape print-media--scene">
+                <img src="assets/images/dishes/NoNeKitchenAndBar_WhatThePho.png" alt="What the Pho?! cocktail in a tall glass with lime, red chili and herbs" width="416" height="334" loading="lazy">
+              </div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-meta">
+                <span class="dish-code">BV27</span>
+                <span class="dish-price">$20.00</span>
+              </div>
+              <h3 class="dish-name-vi">What the Pho?!</h3>
+              <p class="dish-name-en">Signature Cocktail</p>
+              <p class="dish-desc">Gin, Cointreau, cinnamon, cardamom, star anise, lime, chili and Vietnamese coriander.</p>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Carousel dots (mobile only, filled in by js/main.js) -->
+        <div class="dish-dots" role="group" aria-label="Signature dishes" data-dish-dots></div>
+
+        <!-- On mobile the menu link sits below the carousel -->
+        <div class="dishes-more">
+          <a class="text-link" href="menu.html">View Full Menu <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ticker strip -->
+    <div class="ticker">
+      <div class="ticker-track" data-ticker>
+        <!-- Group 1 is read once; every copy after it is decorative -->
+        <p class="ticker-group">
+          <span class="ticker-seq">
+            <span class="ticker-item"><span lang="vi">Phở</span></span><span class="ticker-star" aria-hidden="true">★</span>
+            <span class="ticker-item"><span lang="vi">Bún Chả</span></span><span class="ticker-star" aria-hidden="true">★</span>
+            <span class="ticker-item"><span lang="vi">Bún Đậu Mắm Tôm</span></span><span class="ticker-star" aria-hidden="true">★</span>
+            <span class="ticker-item"><span lang="vi">Nem Rán</span></span><span class="ticker-star" aria-hidden="true">★</span>
+            <span class="ticker-item"><span lang="vi">Cà Phê Muối</span></span><span class="ticker-star" aria-hidden="true">★</span>
+            <span class="ticker-item">Come hungry, leave <span lang="vi">No Nê</span></span><span class="ticker-star" aria-hidden="true">★</span>
+          </span>
+          <span class="ticker-seq" aria-hidden="true">
+            <span class="ticker-item"><span lang="vi">Phở</span></span><span class="ticker-star" aria-hidden="true">★</span>
+            <span class="ticker-item"><span lang="vi">Bún Chả</span></span><span class="ticker-star" aria-hidden="true">★</span>
+            <span class="ticker-item"><span lang="vi">Bún Đậu Mắm Tôm</span></span><span class="ticker-star" aria-hidden="true">★</span>
+            <span class="ticker-item"><span lang="vi">Nem Rán</span></span><span class="ticker-star" aria-hidden="true">★</span>
+            <span class="ticker-item"><span lang="vi">Cà Phê Muối</span></span><span class="ticker-star" aria-hidden="true">★</span>
+            <span class="ticker-item">Come hungry, leave <span lang="vi">No Nê</span></span><span class="ticker-star" aria-hidden="true">★</span>
+          </span>
+        </p>
+        <p class="ticker-group" aria-hidden="true">
+          <span class="ticker-seq">
+            <span class="ticker-item"><span lang="vi">Phở</span></span><span class="ticker-star" aria-hidden="true">★</span>
+            <span class="ticker-item"><span lang="vi">Bún Chả</span></span><span class="ticker-star" aria-hidden="true">★</span>
+            <span class="ticker-item"><span lang="vi">Bún Đậu Mắm Tôm</span></span><span class="ticker-star" aria-hidden="true">★</span>
+            <span class="ticker-item"><span lang="vi">Nem Rán</span></span><span class="ticker-star" aria-hidden="true">★</span>
+            <span class="ticker-item"><span lang="vi">Cà Phê Muối</span></span><span class="ticker-star" aria-hidden="true">★</span>
+            <span class="ticker-item">Come hungry, leave <span lang="vi">No Nê</span></span><span class="ticker-star" aria-hidden="true">★</span>
+          </span>
+          <span class="ticker-seq">
+            <span class="ticker-item"><span lang="vi">Phở</span></span><span class="ticker-star" aria-hidden="true">★</span>
+            <span class="ticker-item"><span lang="vi">Bún Chả</span></span><span class="ticker-star" aria-hidden="true">★</span>
+            <span class="ticker-item"><span lang="vi">Bún Đậu Mắm Tôm</span></span><span class="ticker-star" aria-hidden="true">★</span>
+            <span class="ticker-item"><span lang="vi">Nem Rán</span></span><span class="ticker-star" aria-hidden="true">★</span>
+            <span class="ticker-item"><span lang="vi">Cà Phê Muối</span></span><span class="ticker-star" aria-hidden="true">★</span>
+            <span class="ticker-item">Come hungry, leave <span lang="vi">No Nê</span></span><span class="ticker-star" aria-hidden="true">★</span>
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <!-- 03 Our story -->
+    <section class="section story" aria-labelledby="story-title">
+      <div class="container story-grid">
+        <div class="story-text" data-reveal-group>
+          <p class="section-eyebrow" data-reveal-item>
+            <span class="section-eyebrow-num">03 –</span>
+            <span lang="vi">Chuyện cũ, vị xưa</span>
+          </p>
+          <h2 class="section-title" id="story-title" data-reveal-item>What Does "<span lang="vi">No Nê</span>" Mean?</h2>
+          <p class="story-lead" data-reveal-item><span lang="vi">No Nê</span> is a Vietnamese expression that describes more than just being full. It's the feeling of satisfaction, comfort and joy after a good meal, when your stomach is full and your heart is happy.</p>
+          <p data-reveal-item>Our restaurant is inspired by the <span lang="vi">bao cấp</span> era, when life in Vietnam was simple, food was precious and meals were always shared with warmth and laughter. <span lang="vi">No Nê</span> was not created to chase modern glamour, but to keep those memories alive.</p>
+          <p class="story-quote" data-reveal-item><span class="story-quote-body"><span class="story-quote-text">Here, people don't just eat to be full. They eat to remember.</span></span></p>
+          <div data-reveal-item>
+            <a class="btn btn-primary" href="our-story.html">Discover Our Story <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <div class="story-media">
+          <div class="story-photo story-photo--main" data-colorize>
+            <img src="assets/images/interior/corner-shutters.jpg" alt="Yellow wall corner with blue shutters and a painting of a mother and child inside No Nê" width="1320" height="1714" loading="lazy">
+          </div>
+          <div class="story-photo story-photo--inset" data-colorize>
+            <img src="assets/images/interior/wall-mascot-poster.jpg" alt="The No Nê mascot poster beside a mural of people queuing in the bao cấp era" width="1320" height="950" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 The No Nê experience -->
+    <section class="section experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="section-eyebrow">
+            <span class="section-eyebrow-num">04 –</span>
+            <span lang="vi">Vì sao ăn là nhớ?</span>
+          </p>
+          <h2 class="section-title" id="experience-title">The <span lang="vi">No Nê</span> Experience</h2>
+        </div>
+
+        <ol class="experience-grid" role="list">
+          <li class="experience-item" data-reveal-item>
+            <span class="experience-num" aria-hidden="true">01</span>
+            <h3 class="experience-title" lang="vi">Hương Vị Hà Nội</h3>
+            <p class="experience-sub">Authentic Hanoi Flavours</p>
+            <p class="experience-text">Northern Vietnamese classics like <span lang="vi">phở, bún chả</span> and <span lang="vi">bún đậu mắm tôm</span>, cooked the way they are loved in Hanoi.</p>
+          </li>
+          <li class="experience-item" data-reveal-item>
+            <span class="experience-num" aria-hidden="true">02</span>
+            <h3 class="experience-title" lang="vi">Không Khí Bao Cấp</h3>
+            <p class="experience-sub"><span lang="vi">Bao Cấp</span>-era Atmosphere</p>
+            <p class="experience-text">A dining room full of nostalgia, from old-style details to the playful spirit of our menu.</p>
+          </li>
+          <li class="experience-item" data-reveal-item>
+            <span class="experience-num" aria-hidden="true">03</span>
+            <h3 class="experience-title" lang="vi">Nơi Gặp Gỡ</h3>
+            <p class="experience-sub">A Place for Friends &amp; Family</p>
+            <p class="experience-text">Vietnamese food is meant to be shared. Whether it's a family dinner or a night out with friends, there's a seat for you.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 05 Catering -->
+    <section class="catering" aria-labelledby="catering-title">
+      <div class="catering-content">
+        <div class="catering-inner">
+          <p class="section-eyebrow section-eyebrow--light">
+            <span class="section-eyebrow-num">05 –</span>
+            <span lang="vi">Cỗ to cỗ nhỏ, No Nê lo đủ</span>
+          </p>
+          <h2 class="section-title" id="catering-title">Bringing Hanoi to Your Event</h2>
+          <p class="catering-text">From office lunches to family celebrations, we bring the warmth and flavour of <span lang="vi">No Nê</span> to you.</p>
+          <ul class="catering-list">
+            <li><span class="catering-item-text">Private parties &amp; celebrations</span></li>
+            <li><span class="catering-item-text">Office lunches</span></li>
+            <li><span class="catering-item-text">Family gatherings</span></li>
+            <li><span class="catering-item-text">Community events</span></li>
+          </ul>
+          <div class="catering-actions">
+            <a class="btn btn-secondary" href="catering.html">Explore Catering <span aria-hidden="true">→</span></a>
+            <a class="btn btn-outline btn-outline-light" href="tel:+16046320022">Call for a Quote</a>
+          </div>
+        </div>
+      </div>
+      <div class="catering-media">
+        <img src="assets/images/interior/hanging-signs.jpg" alt="Vintage Hanoi shop signs and red bougainvillea hanging inside No Nê" width="1320" height="1730" loading="lazy">
+      </div>
+    </section>
+
+    <!-- 06 Gallery preview -->
+    <section class="section gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="section-eyebrow">
+              <span class="section-eyebrow-num">06 –</span>
+              <span lang="vi">Ngó vào tí nào</span>
+            </p>
+            <h2 class="section-title" id="gallery-title">A Glimpse Inside</h2>
+          </div>
+          <div class="gallery-links">
+            <a class="insta-link" href="https://www.instagram.com/nonekitchenandbar/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false">
+                <rect x="3" y="3" width="18" height="18" rx="5"/>
+                <circle cx="12" cy="12" r="4.2"/>
+                <circle cx="17.4" cy="6.6" r="0.9" fill="currentColor" stroke="none"/>
+              </svg>
+              @nonekitchenandbar<span class="visually-hidden"> on Instagram (opens in a new tab)</span>
+            </a>
+            <a class="text-link" href="gallery.html">Explore Gallery <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item gallery-item--large" data-reveal-item>
+            <img src="assets/images/interior/mural-street.jpg" alt="Painted mural of an old Hanoi street with a cyclo and bicycles" width="949" height="641" loading="lazy">
+          </div>
+          <div class="gallery-item gallery-item--storefront" data-reveal-item>
+            <img src="assets/images/interior/exterior-day.jpg" alt="No Nê storefront on Denman Street with blue plastic stools" width="1320" height="1727" loading="lazy">
+          </div>
+          <div class="gallery-item gallery-item--dish" data-reveal-item>
+            <img src="assets/images/dishes/NoNeKitchenAndBar_RareBeefPho_2880x2304.jpg" alt="A bowl of rare beef pho with fresh herbs" width="2880" height="2304" loading="lazy">
+          </div>
+          <div class="gallery-item gallery-item--counter" data-reveal-item>
+            <!-- Zoomed crop that shows only the counter on the right -->
+            <div class="gallery-crop">
+              <img src="assets/images/interior/counter-mau-dich.jpg" alt="The bao cấp-style Mậu dịch counter inside No Nê" width="1320" height="1737" loading="lazy">
+            </div>
+          </div>
+          <div class="gallery-item gallery-item--dish" data-reveal-item>
+            <img src="assets/images/dishes/NoNeKitchenAndBar_VietnameseCoffee_2880x2304.jpg" alt="Vietnamese drip coffee with sweetened condensed milk" width="2880" height="2304" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 Visit us -->
+    <section class="section visit" aria-labelledby="visit-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="section-eyebrow">
+            <span class="section-eyebrow-num">07 –</span>
+            <span lang="vi">Nhà ở 867 Phố Denman</span>
+          </p>
+          <h2 class="section-title" id="visit-title">Visit Us</h2>
+        </div>
+
+        <div class="visit-grid">
+          <div class="visit-info">
+            <!-- Decorative house number plate, like the one on the storefront -->
+            <div class="house-plate" aria-hidden="true">
+              <span class="house-plate-num">867</span>
+              <span class="house-plate-street">Denman St</span>
+            </div>
+
+            <div class="visit-details">
+              <div class="visit-block">
+                <h3 class="visit-label">Address</h3>
+                <address>867 Denman Street<br>Vancouver, BC V6G 2L9</address>
+                <a class="link-accent" href="https://www.google.com/maps/search/?api=1&amp;query=867+Denman+Street+Vancouver+BC" target="_blank" rel="noopener">Get Directions <span aria-hidden="true">→</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+              </div>
+              <div class="visit-block">
+                <h3 class="visit-label">Contact</h3>
+                <p><a href="tel:+16046320022">(604) 632-0022</a></p>
+                <p><a href="mailto:nonekitchenandbar@gmail.com">nonekitchenandbar@gmail.com</a></p>
+              </div>
+              <div class="visit-block">
+                <h3 class="visit-label">Hours</h3>
+                <p>Please call us for today's hours.</p>
+              </div>
+              <div class="visit-block">
+                <h3 class="visit-label">Location</h3>
+                <p>In Vancouver's West End, a short walk from English Bay.</p>
+              </div>
+            </div>
+
+            <div class="visit-actions">
+              <button class="btn btn-primary" type="button" data-open-reservation>Reserve a Table</button>
+              <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=867+Denman+Street+Vancouver+BC" target="_blank" rel="noopener">Open in Maps<span class="visually-hidden"> (opens in a new tab)</span></a>
+            </div>
+          </div>
+
+          <div class="visit-media">
+            <div class="storefront-frame">
+              <img src="assets/images/interior/exterior-evening.jpg" alt="No Nê Kitchen &amp; Bar storefront at 867 Denman Street at dusk" width="1320" height="1710" loading="lazy">
+            </div>
+
+            <div class="map-frame">
+              <iframe
+                src="https://www.google.com/maps?q=867+Denman+Street,+Vancouver,+BC&amp;output=embed"
+                title="Map showing No Nê Kitchen &amp; Bar at 867 Denman Street, Vancouver"
+                width="600"
+                height="460"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <!-- Mascot peeking over the top edge of the footer -->
+    <div class="footer-mascot" aria-hidden="true">
+      <span class="footer-mascot-bubble">
+        <span class="footer-mascot-line footer-mascot-line--main" lang="vi">No Nê chưa?</span>
+        <span class="footer-mascot-line footer-mascot-line--sub" lang="en">Feeling No Nê?</span>
+        <span class="footer-mascot-line footer-mascot-line--sub" lang="fr">Bien mangé&#8239;?</span>
+      </span>
+      <div class="footer-mascot-clip">
+        <picture>
+          <source srcset="assets/images/logo/logo-mascot.webp" type="image/webp">
+          <img class="footer-mascot-img" src="assets/images/logo/logo-mascot.png" alt="" width="700" height="423" loading="lazy">
+        </picture>
+      </div>
+    </div>
+
+    <!-- Footer marquee; only the first phrase is read by screen readers -->
+    <div class="footer-marquee">
+      <div class="footer-marquee-track" data-footer-marquee>
+        <p class="footer-marquee-group">
+          <span class="footer-marquee-item">Come hungry. Leave <span lang="vi">No Nê</span>.</span>
+          <span class="footer-marquee-item" aria-hidden="true"><span class="footer-marquee-star">★</span>Come hungry. Leave <span lang="vi">No Nê</span>.</span>
+          <span class="footer-marquee-item" aria-hidden="true"><span class="footer-marquee-star">★</span>Come hungry. Leave <span lang="vi">No Nê</span>.</span>
+          <span aria-hidden="true"><span class="footer-marquee-star">★</span></span>
+        </p>
+        <p class="footer-marquee-group" aria-hidden="true">
+          <span class="footer-marquee-item">Come hungry. Leave <span lang="vi">No Nê</span>.</span>
+          <span class="footer-marquee-item"><span class="footer-marquee-star">★</span>Come hungry. Leave <span lang="vi">No Nê</span>.</span>
+          <span class="footer-marquee-item"><span class="footer-marquee-star">★</span>Come hungry. Leave <span lang="vi">No Nê</span>.</span>
+          <span><span class="footer-marquee-star">★</span></span>
+        </p>
+      </div>
+    </div>
+
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo logo--footer" href="index.html" aria-label="No Nê Kitchen &amp; Bar, home">
+          <picture>
+            <source srcset="assets/images/logo/logo-badge.webp" type="image/webp">
+            <img class="logo-img" src="assets/images/logo/logo-badge.png" alt="No Nê Kitchen &amp; Bar" width="900" height="1013" loading="lazy">
+          </picture>
+        </a>
+
+        <p class="footer-tagline">The feeling of being completely satisfied after a good meal.</p>
+
+        <ul class="social-list">
+          <li>
+            <a class="social-link" href="https://www.instagram.com/nonekitchenandbar/" target="_blank" rel="noopener" aria-label="Instagram (opens in a new tab)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false">
+                <rect x="3" y="3" width="18" height="18" rx="5"/>
+                <circle cx="12" cy="12" r="4.2"/>
+                <circle cx="17.4" cy="6.6" r="0.9" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="social-link" href="https://www.facebook.com/61590321897593/" target="_blank" rel="noopener" aria-label="Facebook (opens in a new tab)">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M13.5 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H7.9v3h2.6V21h3z"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="social-link" href="https://www.tiktok.com/@nonekitchenandbar" target="_blank" rel="noopener" aria-label="TikTok (opens in a new tab)">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M16.6 3c.3 2.2 1.6 3.7 3.9 3.9v3.1c-1.4.1-2.7-.3-3.9-1.1v5.9c0 3.4-2.5 5.9-5.8 5.9-3.1 0-5.6-2.5-5.6-5.6 0-3.4 2.9-6 6.4-5.5v3.2c-1.6-.4-3.2.7-3.2 2.3 0 1.4 1.1 2.4 2.4 2.4 1.5 0 2.6-1.1 2.6-2.8V3h3.2z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <nav class="footer-col" aria-labelledby="footer-nav-heading">
+        <h2 class="footer-heading" id="footer-nav-heading">Navigate</h2>
+        <ul class="footer-links">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="our-story.html">Our Story</a></li>
+          <li><a href="catering.html">Catering</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Visit Us</h2>
+        <address class="footer-contact">
+          <p>
+            <span class="footer-contact-label">Address</span>
+            867 Denman Street<br>Vancouver, BC V6G 2L9
+          </p>
+          <p>
+            <span class="footer-contact-label">Phone</span>
+            <a href="tel:+16046320022">(604) 632-0022</a>
+          </p>
+          <p>
+            <span class="footer-contact-label">Email</span>
+            <a href="mailto:nonekitchenandbar@gmail.com">nonekitchenandbar@gmail.com</a>
+          </p>
+          <p>
+            <span class="footer-contact-label">Hours</span>
+            Please call for today's hours
+          </p>
+        </address>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 No Nê Kitchen &amp; Bar. All rights reserved.</p>
+        <p class="footer-motto">Come hungry. Leave <span lang="vi">No Nê</span>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Reservation popup -->
+  <div class="modal" id="reservation-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-reservation></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="reservation-title" aria-describedby="reservation-desc" tabindex="-1">
+      <button class="modal-close" type="button" aria-label="Close reservation popup" data-close-reservation>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false">
+          <path d="M5 5l14 14M19 5L5 19"/>
+        </svg>
+      </button>
+
+      <span class="eyebrow">Reservations</span>
+      <h2 class="modal-title" id="reservation-title">Book Your Table</h2>
+      <p class="modal-text" id="reservation-desc">We take reservations by phone. Give us a call and we'll save you a seat.</p>
+
+      <a class="modal-phone" href="tel:+16046320022">(604) 632-0022</a>
+
+      <div class="modal-actions">
+        <a class="btn btn-primary" href="tel:+16046320022">Call Now</a>
+        <button class="btn btn-outline" type="button" data-copy-phone="(604) 632-0022">
+          <span data-copy-label>Copy Number</span>
+        </button>
+      </div>
+      <p class="visually-hidden" role="status" aria-live="polite" data-copy-status></p>
+
+      <p class="modal-note">Hours: please call to confirm today's hours.</p>
+    </div>
+  </div>
+
+  <!-- Sticky call bar (mobile only) -->
+  <div class="call-bar" data-call-bar>
+    <a class="btn btn-primary call-bar-btn" href="tel:+16046320022">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M6.6 3.5h2.8l1.4 4.1-2 1.4a12 12 0 0 0 6.2 6.2l1.4-2 4.1 1.4v2.8a2 2 0 0 1-2.2 2C10.5 18.8 5.2 13.5 4.6 5.7a2 2 0 0 1 2-2.2z"/>
+      </svg>
+      Call to Reserve · (604) 632-0022
+    </a>
+  </div>
+
+  <!-- Animation libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

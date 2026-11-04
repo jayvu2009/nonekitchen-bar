@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Large original menu PDFs
+assets/menu/TRANG*.pdf
+/Trang-Menu*.pdf
+
+# Original logo PDF
+assets/images/logo/logo-none.pdf
+
+# Tools and editor
+node_modules/
+.vscode/
