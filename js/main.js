@@ -1011,7 +1011,7 @@
     if (!bar || !("IntersectionObserver" in window)) return;
 
     var mobile = window.matchMedia("(max-width: 768px)");
-    var hero = document.querySelector(".hero, .menu-hero, .story-hero");
+    var hero = document.querySelector(".hero, .menu-hero, .story-hero, .cater-hero");
     var footer = document.querySelector(".site-footer");
     var heroVisible = !!hero;
     var footerVisible = false;
