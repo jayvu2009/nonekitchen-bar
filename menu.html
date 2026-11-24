@@ -3,14 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Menu | No Nê Kitchen &amp; Bar | Hanoi Comfort Food in Vancouver</title>
-  <meta name="description" content="The full No Nê Kitchen &amp; Bar menu: Hanoi-style pho, vermicelli, rice plates, banh mi, street food, Vietnamese coffee, matcha and cocktails on Denman Street, Vancouver.">
+  <title>Menu | Pho, Bun Cha &amp; Vietnamese Coffee | No Nê Kitchen &amp; Bar</title>
+  <meta name="description" content="See our menu: Hanoi pho, bun cha, vermicelli, rice plates, banh mi, street food, Vietnamese coffee and cocktails at No Nê on Denman Street, Vancouver.">
+  <link rel="canonical" href="https://example.com/menu.html">
+  <meta name="theme-color" content="#005557">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="No Nê Kitchen &amp; Bar">
-  <meta property="og:title" content="Menu | No Nê Kitchen &amp; Bar">
-  <meta property="og:description" content="Hanoi comfort food, playful drinks and a little bit of nostalgia. Come hungry. Leave No Nê.">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:title" content="Menu | Pho, Bun Cha &amp; Vietnamese Coffee | No Nê Kitchen &amp; Bar">
+  <meta property="og:description" content="See our menu: Hanoi pho, bun cha, vermicelli, rice plates, banh mi, street food, Vietnamese coffee and cocktails at No Nê on Denman Street, Vancouver.">
+  <meta property="og:url" content="https://example.com/menu.html">
+  <meta property="og:image" content="https://example.com/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The No Nê mascot poster and a bao cấp-era mural on the wall at No Nê Kitchen &amp; Bar">
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Menu | Pho, Bun Cha &amp; Vietnamese Coffee | No Nê Kitchen &amp; Bar">
+  <meta name="twitter:description" content="See our menu: Hanoi pho, bun cha, vermicelli, rice plates, banh mi, street food, Vietnamese coffee and cocktails at No Nê on Denman Street, Vancouver.">
+  <meta name="twitter:image" content="https://example.com/assets/images/og-image.jpg">
+  <meta name="twitter:image:alt" content="The No Nê mascot poster and a bao cấp-era mural on the wall at No Nê Kitchen &amp; Bar">
 
   <!-- Favicon -->
   <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/logo/favicon.webp">
@@ -23,11 +38,1214 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&subset=vietnamese&display=swap">
 
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="assets/images/interior/hanging-signs.jpg">
+
   <!-- Styles -->
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/menu.css">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Menu",
+        "@id": "https://example.com/menu.html#menu",
+        "name": "No Nê Kitchen & Bar Menu",
+        "url": "https://example.com/menu.html",
+        "inLanguage": "en-CA",
+        "publisher": {
+          "@id": "https://example.com/#restaurant"
+        },
+        "hasMenuSection": [
+          {
+            "@type": "MenuSection",
+            "name": "Appetizers",
+            "alternateName": "Ăn Chút Chút",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Beef Pho Rolls",
+                "alternateName": "Phở Cuốn Ngũ Xã",
+                "description": "Fresh rice noodles wrapped with stir-fried striploin beef, cucumber, mint and cilantro.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "11.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Hanoi Fried Spring Rolls",
+                "alternateName": "Nem Rán Hà Nội",
+                "description": "Crispy fried spring rolls filled with ground pork, glass noodles, wood ear mushrooms, carrots and egg, wrapped in rice paper and deep-fried. Served with No Nê sweet and sour fish sauce and fresh herbs.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "12.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Then & Now Combo",
+                "alternateName": "Nem & Phở Cuốn",
+                "description": "Crispy Hanoi spring rolls and fresh pho rolls, a balance of crunch and freshness.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "12.48",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Crispy Crab Spring Rolls",
+                "alternateName": "Nem Cua Bể",
+                "description": "Crispy rolls filled with crab meat, prawn, ground pork, eggs, glass noodles, shiitake mushroom, wood ear fungus, carrot, jicama, onion and shallot. Served with No Nê sweet and sour fish sauce.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "13.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Deep Fried Young Rice Cake",
+                "alternateName": "Chả Cốm Chiên",
+                "description": "Traditional Vietnamese pork patties blended with young green rice.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "14.48",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Chicken Wings",
+                "alternateName": "Cánh Gà",
+                "description": "Please select one flavour: tamarind, garlic butter or fish sauce glaze.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "15.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Crab Soup with Century Egg",
+                "alternateName": "Soup Cua Trứng Bắc Thảo",
+                "description": "Silky crab soup with shredded chicken, quail eggs and century eggs.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "12.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Fresh Salad Rolls",
+                "alternateName": "Gỏi Cuốn",
+                "description": "Choice of shrimp, lemongrass chicken or grilled pork.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "13.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Vietnamese Beef Salad",
+                "alternateName": "Gỏi Bò Bóp Thấu",
+                "description": "Thinly sliced beef tossed with onions, fresh herbs and carrots, topped with roasted peanuts and dressed in a sweet and sour fish sauce.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "15.98",
+                  "priceCurrency": "CAD"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Street Food",
+            "alternateName": "Nhức Nách",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Fried Corn",
+                "alternateName": "Ngô Chiên",
+                "description": "Deep fried sweet corn sautéed in butter.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "10.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Butter Fries",
+                "alternateName": "Khoai Tây Chiên Bơ",
+                "description": "Crispy fries tossed in butter.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "10.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Deep Fried Pork Rolls",
+                "alternateName": "Nem Chua Rán",
+                "description": "Crispy fried pork rolls made with ground pork, pork skin, garlic and spices. Served with No Nê homemade chili sauce.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "19.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Legendary Street Food Platter",
+                "alternateName": "Mẹt Ăn Vặt Thần Chưởng",
+                "description": "Vietnamese snack platter with crispy fried corn, deep fried pork rolls and buttered fries.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "34.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Grilled Pork Skewers with Sesame",
+                "alternateName": "Thịt Xiên Nướng Tẩm Mè",
+                "description": "Grilled pork skewers marinated with lemongrass, sesame and garlic.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "11.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Tofu with Scallion Oil",
+                "alternateName": "Đậu Phụ Tẩm Hành",
+                "description": "Crispy fried tofu drizzled with scallion oil and fish sauce.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "13.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Vietnamese Rice Paper Salad",
+                "alternateName": "Bánh Tráng Trộn",
+                "description": "Shredded rice paper salad with dried jerky beef, quail eggs, herbs, green mango, shallots, shrimp chilli sauce, dried shrimp and peanuts.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "13.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Rice Paper Rolls",
+                "alternateName": "Bánh Tráng Cuộn",
+                "description": "Rice paper rolls with dried jerky beef, quail eggs, herbs, green mango and shallots, served with a creamy sauce. Please select one flavour.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "15.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Salted Egg Yolk Sea Snails",
+                "alternateName": "Ốc Hương Trứng Muối",
+                "description": "Sea snails stir-fried with salted egg yolk, butter and garlic.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "24.98",
+                  "priceCurrency": "CAD"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Vietnamese Signature Noodle Soup",
+            "alternateName": "Phở",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Tung's Signature Pan-seared Beef Pho",
+                "alternateName": "Phở Bò Xào Lăn Ông Tùng",
+                "description": "Hanoi-style beef noodle soup with wok-seared beef shank, green onions and garlic.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "19.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Beef Bone Marrow Pho in Stone Bowl",
+                "alternateName": "Phở Tủy Bò Thố Đá",
+                "description": "Rich beef broth with bone marrow, tenderloin beef slices, herbs and rice noodles.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "25.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Rare Beef Pho",
+                "alternateName": "Phở Tái",
+                "description": "Thinly sliced rare tenderloin beef with rice noodles, herbs and hot broth.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "19.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Rare Beef & Brisket Pho",
+                "alternateName": "Phở Tái Nạm",
+                "description": "Rare tenderloin beef and brisket with rice noodles, herbs and broth.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "19.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Rare Beef & Beef Ball Pho",
+                "alternateName": "Phở Tái Bò Viên",
+                "description": "Rare tenderloin beef and meatballs with rice noodles, herbs and broth.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "19.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Brisket Pho",
+                "alternateName": "Phở Nạm",
+                "description": "Slow-cooked brisket with rice noodles and aromatic broth.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "19.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Brisket & Beef Ball Pho",
+                "alternateName": "Phở Nạm Bò Viên",
+                "description": "Brisket and meatballs with rice noodles and broth.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "19.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Special Pho",
+                "alternateName": "Phở Đặc Biệt",
+                "description": "A selection of rare tenderloin beef, brisket, meatballs, tripe and tendon with rice noodles and herbs.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "20.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Beef Ball Pho",
+                "alternateName": "Phở Bò Viên",
+                "description": "Beef meatballs with rice noodles, herbs and clear broth.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "18.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Stir-fried Beef Pho",
+                "alternateName": "Phở Xào Hàng Buồm",
+                "description": "Stir-fried rice noodles with striploin beef, garlic, onions and mixed vegetables, tossed in a savoury soy-based sauce.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "19.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Beef Stew Pho",
+                "alternateName": "Phở Sốt Vang",
+                "description": "Rice noodles with slow-braised beef stew in a rich, aromatic sauce with carrots, spices and herbs.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "19.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Lemongrass Chicken Pho",
+                "alternateName": "Phở Gà Nướng Sả",
+                "description": "Grilled lemongrass chicken with rice noodles, herbs and broth.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "19.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Sliced Free-range Chicken Pho",
+                "alternateName": "Phở Gà Lãn Ông",
+                "description": "Aromatic chicken broth with sliced chicken and rice noodles, served with fresh herbs, lime and chili.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "19.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Hanoi-style Chicken Pho with Bamboo Shoots & Meatballs",
+                "alternateName": "Phở Gà Măng, Mọc Sụn",
+                "description": "Noodle soup with bamboo shoots and pork meatballs in a rich, aromatic chicken broth, served with rice noodles and fresh herbs.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "21.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Dry Chicken Pho",
+                "alternateName": "Phở Gà Trộn",
+                "description": "Rice noodles with shredded chicken, carrot, cucumber, mint, cilantro, Vietnamese coriander, fried shallots and peanuts, with No Nê house dressing.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "21.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Dry Chicken Pho with Salted Egg Meatballs",
+                "alternateName": "Phở Gà Trộn Mọc Trứng Muối",
+                "description": "Dry mixed pho with shredded chicken, carrot, cucumber, salted egg chicken meatballs, fried shallots and peanuts, tossed in a rich savoury sauce with mint, cilantro and Vietnamese coriander.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "25.98",
+                  "priceCurrency": "CAD"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Vermicelli",
+            "alternateName": "Bún",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Hanoi-style Grilled Pork Vermicelli",
+                "alternateName": "Bún Chả Hàng Mành",
+                "description": "Grilled pork and pork meatballs in No Nê chilli lime sauce, served with vermicelli noodles and fresh herbs.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "21.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Grilled Pork Vermicelli with Spring Rolls",
+                "alternateName": "Bún Chả – Nem",
+                "description": "Grilled pork and pork meatballs in No Nê chilli lime sauce, served with vermicelli noodles, fresh herbs and one Hanoi crispy crab spring roll.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "21.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Deep Fried Crab Spring Rolls Vermicelli",
+                "alternateName": "Bún Nem Cua Bể",
+                "description": "Vermicelli with crispy crab spring rolls, herbs and dipping sauce.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "22.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Noodles with Fermented Shrimp Paste & Tofu",
+                "alternateName": "Bún Đậu Mắm Tôm Phát Lộc",
+                "description": "Steamed pork hock slices, deep-fried tofu and deep-fried young rice cake, served with vermicelli noodles, fresh herbs and shrimp paste sauce.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "26.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Stir-fried Beef Vermicelli",
+                "alternateName": "Bún Bò Xào Hàng Điếu",
+                "description": "Fresh rice vermicelli with stir-fried beef shank and onions, fresh herbs, pickles, cucumber and savoury sweet fish sauce.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "20.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Grilled Pork Vermicelli",
+                "alternateName": "Bún Thịt Nướng",
+                "description": "Fresh rice vermicelli with grilled pork, crispy spring rolls, fresh herbs, pickles, cucumber and savoury sweet fish sauce.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "19.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Grilled Pork Vermicelli with Imperial Spring Rolls",
+                "alternateName": "Bún Thịt Nướng Chả Giò",
+                "description": "Grilled pork with crispy golden spring rolls, vermicelli, fresh vegetables and traditional fish sauce dressing.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "19.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Lemongrass Chicken Vermicelli",
+                "alternateName": "Bún Gà Sả",
+                "description": "Grilled lemongrass chicken with vermicelli, herbs and pickles.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "19.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Lemongrass Chicken Vermicelli with Imperial Spring Rolls",
+                "alternateName": "Bún Gà Sả Chả Giò",
+                "description": "Fresh rice vermicelli with lemongrass grilled chicken, crispy spring rolls, fresh herbs, pickles, cucumber and savoury sweet fish sauce.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "19.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Hue Royal Beef Noodle Soup",
+                "alternateName": "Bún Bò Huế Cung Đình",
+                "description": "Hue-inspired spicy beef noodle soup with pork hock, beef shank, crab cake and traditional Hue pork sausage.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "21.98",
+                  "priceCurrency": "CAD"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Rice Plates",
+            "alternateName": "Món Cơm",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Fried Rice with Pickled Mustard Greens & Beef",
+                "alternateName": "Cơm Rang Dưa Bò",
+                "description": "Wok-fried rice with sliced beef, pickled mustard greens and garlic.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "20.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Lemongrass Grilled Pork Chop with Rice",
+                "alternateName": "Cơm Sườn Heo Nướng Sả",
+                "description": "Juicy pork chop grilled with lemongrass, served with rice, cucumber and pickled vegetables.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "20.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Lemongrass Grilled Pork Chop with Rice & Imperial Spring Rolls",
+                "alternateName": "Cơm Sườn Heo Nướng Sả Chả Giò",
+                "description": "Grilled lemongrass pork chop with steamed rice, crispy spring rolls and house pickles.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "20.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Lemongrass Grilled Pork Chop with Rice & Sunny-side-up Egg",
+                "alternateName": "Cơm Sườn Heo Nướng Sả & Trứng",
+                "description": "Lemongrass pork chop and two sunny-side-up eggs, served with rice and pickles.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "20.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Lemongrass Chicken Rice",
+                "alternateName": "Cơm Gà Sả",
+                "description": "Grilled chicken thigh marinated in lemongrass and spices, served with steamed rice.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "20.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Lemongrass Chicken with Rice & Imperial Spring Rolls",
+                "alternateName": "Cơm Gà Sả Chả Giò",
+                "description": "Grilled lemongrass chicken with steamed rice, crispy spring rolls and house pickles.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "20.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Lemongrass Chicken with Rice & Egg",
+                "alternateName": "Cơm Gà Sả & Trứng",
+                "description": "Grilled lemongrass chicken and two sunny-side-up eggs, served with rice and pickles.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "20.98",
+                  "priceCurrency": "CAD"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Vietnamese Sub",
+            "alternateName": "Bánh Mì",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Grilled Pork Skewers Banh Mi",
+                "alternateName": "Bánh Mì Thịt Xiên Nướng",
+                "description": "Crispy baguette filled with grilled pork skewers, pickles, cucumber and herbs.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "14.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Hanoi-style Special Banh Mi",
+                "alternateName": "Bánh Mì Dân Tổ",
+                "description": "Stir-fried filling of eggs, sausage, ham, pâté and butter inside a crispy baguette.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "12.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Lemongrass Chicken Banh Mi",
+                "alternateName": "Bánh Mì Gà Sả",
+                "description": "Grilled chicken with lemongrass, pickled carrots, cucumber, cilantro and sauce inside a crispy baguette.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "11.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Beef Stew Banh Mi",
+                "alternateName": "Bánh Mì Sốt Vang",
+                "description": "Slow-cooked beef stew with carrots and herbs, served with bread.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "16.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Vietnamese Skillet Banh Mi",
+                "alternateName": "Bánh Mì Chảo Hòa Mã",
+                "description": "Hot pan with a sunny-side-up egg, pâté, fries and stir-fried beef, served with bread.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "22.98",
+                  "priceCurrency": "CAD"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Vegetarian",
+            "alternateName": "Thanh Đạm",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Tofu Salad Rolls",
+                "alternateName": "Gỏi Cuốn Chay",
+                "description": "Fresh rice paper rolls filled with herbs, soft vermicelli, tofu and seasonal vegetables. Served with peanut sauce.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "11.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Vegetarian Spring Rolls",
+                "alternateName": "Chả Giò Chay",
+                "description": "Glass noodles, mung beans, kohlrabi, yam, shiitake mushrooms and wood ear fungus, served with sweet chilli sauce.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "11.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Lemongrass & Kumquat Shaken Tofu",
+                "alternateName": "Đậu Hũ Lắc Sả Tắc",
+                "description": "Crispy fried tofu, soft and silky inside, tossed with minced lemongrass and tangy kumquat juice. A balance of sour, savoury, sweet and a hint of spice.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "11.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Tofu Baguette",
+                "alternateName": "Bánh Mì Chay",
+                "description": "Mayonnaise, deep-fried tofu, pickled carrots and daikon, fresh cucumber, jalapeño and cilantro.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "11.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Vegetarian Pho Noodle Soup",
+                "alternateName": "Phở Chay",
+                "description": "Rice noodles, tofu, lotus root, king oyster mushrooms, broccoli, carrot and aromatic house-made vegan broth.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "17.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Vermicelli Bowl",
+                "alternateName": "Bún Chay",
+                "description": "Tofu and vegetarian spring rolls with crunchy carrot, daikon, lettuce and bean sprouts, garnished with roasted peanuts, sesame seeds and fried shallots, with sweet and sour soy sauce.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "17.98",
+                  "priceCurrency": "CAD"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Desserts",
+            "alternateName": "Ê Hề Ê Hề",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Hanoi-style Jasmine Tofu Pudding",
+                "alternateName": "Tào Phớ Hoa Nhài",
+                "description": "Silky smooth tofu pudding infused with delicate jasmine, served with lightly sweet syrup.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "7.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Coconut Ice Cream",
+                "alternateName": "Kem Dừa",
+                "description": "Creamy coconut ice cream served in a coconut shell bowl, topped with toasted coconut flakes.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "7.98",
+                  "priceCurrency": "CAD"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Coffee Addict",
+            "alternateName": "1..2..3..Dzô",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Vietnamese Iced or Hot Coffee with Condensed Milk",
+                "alternateName": "Drama Nóng – Tình Lạnh",
+                "description": "Classic Vietnamese drip coffee with sweetened condensed milk.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "6.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Coconut Coffee",
+                "alternateName": "Dừa Ơi Đừng Bơ Tui",
+                "description": "Bold coffee blended with creamy coconut milk.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "7.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Laughing Cow Cheese Coffee",
+                "alternateName": "Phô Mai Kéo Mood",
+                "description": "Vietnamese coffee with Laughing Cow cheese and creamy cheese foam.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "7.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Salted Cream Coffee",
+                "alternateName": "Một Chút Mặn, Ngàn Chút Ghiền",
+                "description": "Rich Vietnamese coffee topped with silky salted cream, served with a lady finger biscuit.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "7.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Matcha Cream Coffee",
+                "alternateName": "Matcha Phủ Mây",
+                "description": "Bold coffee topped with smooth matcha cream.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "7.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Coconut Roasted Egg Cream Coffee",
+                "alternateName": "Trứng Mây Nướng",
+                "description": "Bold coffee topped with fluffy egg cream and roasted coconut.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "7.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Vietnamese Milk Coffee (Hot or Iced)",
+                "alternateName": "Tỉnh Ngủ Cấp Tốc",
+                "description": "A smooth blend of Vietnamese coffee and condensed milk, light in caffeine but rich in flavour.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "6.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Vietnamese Milk Coffee with Tiramisu Cream",
+                "alternateName": "Ngọt Lịm Tới Nóc",
+                "description": "Light Vietnamese milk coffee with creamy tiramisu foam and hints of cocoa.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "7.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Vietnamese White Coffee with Coconut Milk",
+                "alternateName": "Ngọt Xỉu Ngang Dừa",
+                "description": "Light Vietnamese milk coffee blended with creamy coconut milk.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "7.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Tamarind Cold Brew",
+                "alternateName": "Me Ơi, Đừng Chua Như Người Yêu Cũ",
+                "description": "Smooth cold brew coffee with tangy-sweet tamarind.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "7.98",
+                  "priceCurrency": "CAD"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Sweet Treat",
+            "alternateName": "Uống Là Mê, Không Về Được",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Coconut Cacao Cloud",
+                "alternateName": "Sống Sao Cho Dừa",
+                "description": "Rich cacao blended with creamy coconut milk.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "7.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Salted Cream Cacao",
+                "alternateName": "Mặn Nhẹ Nhưng Tình Sâu",
+                "description": "Rich cacao topped with smooth salted cream.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "8.98",
+                  "priceCurrency": "CAD"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Mocktails & Refreshers",
+            "alternateName": "Giải Nhiệt Tâm Hồn",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Upside Down Watermelon Yakult",
+                "alternateName": "Úp Ngược Nhưng Không Ngã",
+                "description": "Fresh watermelon blended with tangy Yakult and soda.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "7.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Blue Ocean Soda",
+                "alternateName": "Biển Xanh Nhưng Không Xanh Bằng Mood",
+                "description": "Blue curaçao syrup, fresh lemon and mint leaves, topped with sparkling soda.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "7.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Tropical Sunset Mocktail",
+                "alternateName": "Chill Như Kì Nghỉ Phép",
+                "description": "Mango, pineapple and coconut water, layered with hibiscus for a vibrant sunset effect.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "7.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Lychee Rainbow Soda",
+                "alternateName": "Lộn Cầu Vồng",
+                "description": "Lychee syrup and butterfly pea tea, topped with sparkling soda.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "7.98",
+                  "priceCurrency": "CAD"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Matcha Lover",
+            "alternateName": "Yêu Matcha Hơn Yêu Anh",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Cheese Foam Matcha Latte",
+                "alternateName": "Matcha Mây",
+                "description": "Premium Japanese matcha blended with fresh milk, topped with smooth cheese foam.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "8.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Coconut Matcha Latte",
+                "alternateName": "Mát Xa Sữa Dừa",
+                "description": "Matcha blended with creamy coconut milk.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "8.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Strawberry Matcha Latte",
+                "alternateName": "Matcha Nhưng Lỡ Mê Dâu",
+                "description": "Premium matcha, fresh strawberry purée, strawberry syrup, fresh milk and condensed milk.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "8.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Salted Cream Matcha",
+                "alternateName": "Mát Lòng Mát Ví",
+                "description": "Premium Japanese matcha with fresh milk, topped with creamy salted foam.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "8.98",
+                  "priceCurrency": "CAD"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Tea & Good Vibes",
+            "alternateName": "Trà Không Làm Bạn Thất Vọng, Người Thì Có",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Creamy Foam Peach Tea",
+                "alternateName": "Đào Ngọt Không Lừa Dối",
+                "description": "Black tea infused with peach syrup, topped with creamy foam and peach jelly.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "8.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Strawberry Tamarind Tea",
+                "alternateName": "Gánh Hàng Rong",
+                "description": "Oolong tea infused with tamarind syrup and strawberry jam. Lightly tangy, fruity and refreshing.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "7.98",
+                  "priceCurrency": "CAD"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Beer & Cocktail",
+            "alternateName": "Nhậu It Out",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Asahi Craft Beer",
+                "description": "Pint (330ml / 500ml) $7.98 · Pitcher (about 1.5L to 2L) $22.98.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "7.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Heineken (330ml)",
+                "alternateName": "Heineken",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "8.00",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Truc Bach Paramount (330ml)",
+                "alternateName": "Trúc Bạch Paramount",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "8.00",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Signature Cocktail",
+                "alternateName": "What the Pho?!",
+                "description": "A Vietnamese-inspired aromatic cocktail infused with warm spices and herbs. Gin, Cointreau, cinnamon stick, cardamom pods, star anise, lime, red chili and Vietnamese coriander.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "20.00",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Young Green Rice Cocktail",
+                "alternateName": "Cốm On, Let's Go!",
+                "description": "Delicate and fragrant, with the flavour of cốm (young green rice), a specialty snack from Hanoi, and a hint of citrus. White rum, Cointreau, orange juice, young rice syrup and lime juice.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "19.00",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Betel Leaf Cocktail",
+                "alternateName": "Hanoi By Night",
+                "description": "A tropical and herbal cocktail with Vietnamese betel leaf. Vodka, Malibu coconut rum, betel leaf powder, lime juice and pineapple juice.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "20.00",
+                  "priceCurrency": "CAD"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Soft Drinks & Others",
+            "alternateName": "Nước Giải Khát",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Coca-Cola Bottle",
+                "alternateName": "Cô Ca Cô Ca – Tuổi Thơ Dữ Dội",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "3.98",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Dracontomelon Juice",
+                "alternateName": "Nước Sấu Hà Nội",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "6.28",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Ginger Ale",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "3.00",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Iced Tea",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "3.00",
+                  "priceCurrency": "CAD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Diet Coke",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "3.00",
+                  "priceCurrency": "CAD"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://example.com/menu.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://example.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Menu",
+            "item": "https://example.com/menu.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="menu-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -1975,7 +3193,11 @@
           </p>
           <p>
             <span class="footer-contact-label">Hours</span>
-            Please call for today's hours
+            <span class="hours-lines" data-hours>
+              <span class="hours-line">Mon–Thu · <span class="hours-time">11:00 AM – 9:00 PM</span></span>
+              <span class="hours-line">Fri–Sun · <span class="hours-time">11:00 AM – 10:00 PM</span></span>
+            </span>
+            <span class="hours-status" data-hours-status hidden></span>
           </p>
         </address>
       </div>
@@ -2013,7 +3235,14 @@
       </div>
       <p class="visually-hidden" role="status" aria-live="polite" data-copy-status></p>
 
-      <p class="modal-note">Hours: please call to confirm today's hours.</p>
+      <div class="modal-note">
+        <span class="visually-hidden">Hours: </span>
+        <span class="hours-lines" data-hours>
+          <span class="hours-line">Mon–Thu · <span class="hours-time">11:00 AM – 9:00 PM</span></span>
+          <span class="hours-line">Fri–Sun · <span class="hours-time">11:00 AM – 10:00 PM</span></span>
+        </span>
+        <span class="hours-status" data-hours-status hidden></span>
+      </div>
     </div>
   </div>
 

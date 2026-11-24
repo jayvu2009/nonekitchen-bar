@@ -1011,7 +1011,7 @@
     if (!bar || !("IntersectionObserver" in window)) return;
 
     var mobile = window.matchMedia("(max-width: 768px)");
-    var hero = document.querySelector(".hero, .menu-hero, .story-hero, .cater-hero");
+    var hero = document.querySelector(".hero, .menu-hero, .story-hero, .cater-hero, .gal-hero, .ct-hero");
     var footer = document.querySelector(".site-footer");
     var heroVisible = !!hero;
     var footerVisible = false;
@@ -1091,6 +1091,166 @@
     });
   }
 
+  /* Opening hours in Vancouver time. Change them here and every page updates. */
+  var HOURS = {
+    timeZone: "America/Vancouver",
+    groups: [
+      { short: "Mon–Thu", long: "Monday–Thursday", days: [1, 2, 3, 4], open: "11:00", close: "21:00" },
+      { short: "Fri–Sun", long: "Friday–Sunday", days: [5, 6, 0], open: "11:00", close: "22:00" }
+    ]
+  };
+
+  var DAY_NAMES = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var vancouverClock = null;
+
+  function toMinutes(hhmm) {
+    var parts = hhmm.split(":");
+    return Number(parts[0]) * 60 + Number(parts[1]);
+  }
+
+  /* "21:00" becomes "9:00 PM" */
+  function formatTime(hhmm) {
+    var total = toMinutes(hhmm);
+    var hour = Math.floor(total / 60);
+    var minute = total % 60;
+    return (hour % 12 || 12) + ":" + (minute < 10 ? "0" : "") + minute + " " + (hour >= 12 ? "PM" : "AM");
+  }
+
+  function hoursForDay(day) {
+    return HOURS.groups.filter(function (group) {
+      return group.days.indexOf(day) !== -1;
+    })[0] || null;
+  }
+
+  /* Day of the week and minutes since midnight in Vancouver, whatever the visitor's time zone */
+  function vancouverNow() {
+    if (!vancouverClock) {
+      vancouverClock = new Intl.DateTimeFormat("en-US", {
+        timeZone: HOURS.timeZone,
+        weekday: "short",
+        hour: "numeric",
+        minute: "numeric",
+        hourCycle: "h23"
+      });
+    }
+    var parts = {};
+    vancouverClock.formatToParts(new Date()).forEach(function (part) {
+      parts[part.type] = part.value;
+    });
+    var day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].indexOf(parts.weekday);
+    return { day: day, minutes: (Number(parts.hour) % 24) * 60 + Number(parts.minute) };
+  }
+
+  /* Open now, closing soon (last 30 minutes) or closed, with the next opening time */
+  function hoursStatus() {
+    var now = vancouverNow();
+    var today = hoursForDay(now.day);
+
+    if (today) {
+      var open = toMinutes(today.open);
+      var close = toMinutes(today.close);
+      if (now.minutes >= open && now.minutes < close) {
+        if (close - now.minutes <= 30) {
+          return { state: "closing", isOpen: true, day: now.day, text: "Closing soon · until " + formatTime(today.close) };
+        }
+        return { state: "open", isOpen: true, day: now.day, text: "Open now · until " + formatTime(today.close) };
+      }
+      if (now.minutes < open) {
+        return { state: "closed", isOpen: false, day: now.day, text: "Closed · opens " + formatTime(today.open) + " today" };
+      }
+    }
+
+    for (var i = 1; i <= 7; i++) {
+      var day = (now.day + i) % 7;
+      var next = hoursForDay(day);
+      if (next) {
+        var when = i === 1 ? "tomorrow" : DAY_NAMES[day];
+        return { state: "closed", isOpen: false, day: now.day, text: "Closed · opens " + formatTime(next.open) + " " + when };
+      }
+    }
+    return { state: "closed", isOpen: false, day: now.day, text: "Closed" };
+  }
+
+  /* Hours text, lists and tables, all written from HOURS */
+  function renderHours() {
+    document.querySelectorAll("[data-hours]").forEach(function (el) {
+      el.textContent = "";
+      HOURS.groups.forEach(function (group) {
+        var line = document.createElement("span");
+        line.className = "hours-line";
+        line.appendChild(document.createTextNode(group.short + " · "));
+        /* The time range never wraps onto two lines */
+        var time = document.createElement("span");
+        time.className = "hours-time";
+        time.textContent = formatTime(group.open) + " – " + formatTime(group.close);
+        line.appendChild(time);
+        el.appendChild(line);
+      });
+    });
+
+    document.querySelectorAll("[data-hours-table]").forEach(function (tbody) {
+      tbody.textContent = "";
+      HOURS.groups.forEach(function (group) {
+        var row = document.createElement("tr");
+        row.setAttribute("data-days", group.days.join(","));
+        var th = document.createElement("th");
+        th.scope = "row";
+        th.textContent = group.long;
+        var td = document.createElement("td");
+        td.textContent = formatTime(group.open) + " – " + formatTime(group.close);
+        row.appendChild(th);
+        row.appendChild(td);
+        tbody.appendChild(row);
+      });
+    });
+  }
+
+  function updateHoursStatus() {
+    var status = hoursStatus();
+
+    document.querySelectorAll("[data-hours-status]").forEach(function (el) {
+      el.textContent = status.text;
+      el.classList.remove("is-open", "is-closing", "is-closed");
+      el.classList.add("is-" + status.state);
+      el.hidden = false;
+    });
+
+    /* Highlight today's row in any hours table */
+    document.querySelectorAll("[data-hours-table] tr").forEach(function (row) {
+      var days = (row.getAttribute("data-days") || "").split(",").map(Number);
+      var isToday = days.indexOf(status.day) !== -1;
+      row.classList.toggle("is-today", isToday);
+      var tag = row.querySelector(".hours-today");
+      if (isToday && !tag) {
+        tag = document.createElement("span");
+        tag.className = "hours-today";
+        tag.textContent = "Today";
+        row.querySelector("th").appendChild(document.createTextNode(" "));
+        row.querySelector("th").appendChild(tag);
+      } else if (!isToday && tag) {
+        tag.remove();
+      }
+    });
+
+    document.dispatchEvent(new CustomEvent("nonehours", { detail: status }));
+  }
+
+  /* Update the status at the start of every minute */
+  function initHours() {
+    if (!window.Intl || !Intl.DateTimeFormat) return;
+    renderHours();
+    updateHoursStatus();
+
+    function tick() {
+      updateHoursStatus();
+      setTimeout(tick, 60000 - (Date.now() % 60000) + 50);
+    }
+    setTimeout(tick, 60000 - (Date.now() % 60000) + 50);
+  }
+
+  /* Shared with page scripts such as js/contact.js */
+  window.noNeHours = { hours: HOURS, status: hoursStatus, formatTime: formatTime };
+
   initHeader();
   /* Shared with page scripts such as js/menu.js (bottom sheets) */
   window.noNeLockPage = lockPage;
@@ -1106,4 +1266,5 @@
   initDishCarousel();
   initCallBar();
   initReservation();
+  initHours();
 })();

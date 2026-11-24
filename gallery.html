@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Gallery | Food &amp; Dining Room Photos | No Nê Kitchen &amp; Bar</title>
+  <meta name="description" content="Photos from No Nê Kitchen &amp; Bar on Denman Street, Vancouver: Hanoi pho, bun cha and street food, our bao cấp-style dining room and archival photos.">
+  <link rel="canonical" href="https://example.com/gallery.html">
+  <meta name="theme-color" content="#005557">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="No Nê Kitchen &amp; Bar">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:title" content="Gallery | Food &amp; Dining Room Photos | No Nê Kitchen &amp; Bar">
+  <meta property="og:description" content="Photos from No Nê Kitchen &amp; Bar on Denman Street, Vancouver: Hanoi pho, bun cha and street food, our bao cấp-style dining room and archival photos.">
+  <meta property="og:url" content="https://example.com/gallery.html">
+  <meta property="og:image" content="https://example.com/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The No Nê mascot poster and a bao cấp-era mural on the wall at No Nê Kitchen &amp; Bar">
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gallery | Food &amp; Dining Room Photos | No Nê Kitchen &amp; Bar">
+  <meta name="twitter:description" content="Photos from No Nê Kitchen &amp; Bar on Denman Street, Vancouver: Hanoi pho, bun cha and street food, our bao cấp-style dining room and archival photos.">
+  <meta name="twitter:image" content="https://example.com/assets/images/og-image.jpg">
+  <meta name="twitter:image:alt" content="The No Nê mascot poster and a bao cấp-era mural on the wall at No Nê Kitchen &amp; Bar">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/logo/favicon.webp">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/images/logo/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/images/logo/favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&subset=vietnamese&display=swap">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/gallery.css">
+
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="assets/images/vintage/hanoi-street-painting.jpg">
+
+  <!-- Prints start undeveloped only when motion is allowed. Shows them again if the scripts fail to load. -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      if (!window.matchMedia || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      root.classList.add("gal-motion");
+      setTimeout(function () {
+        if (!window.gsap || !window.ScrollTrigger) root.classList.remove("gal-motion");
+      }, 2500);
+    })();
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://example.com/gallery.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://example.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Gallery",
+            "item": "https://example.com/gallery.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="gallery-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress-bar"></span></div>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="logo logo--header" href="index.html" aria-label="No Nê Kitchen &amp; Bar, home">
+        <picture class="logo-picture">
+          <source srcset="assets/images/logo/logo-wordmark.webp" type="image/webp">
+          <img class="logo-img" src="assets/images/logo/logo-wordmark.png" alt="No Nê Kitchen &amp; Bar" width="1000" height="539">
+        </picture>
+      </a>
+
+      <div class="header-actions">
+        <nav class="primary-nav" id="primary-nav" aria-label="Main">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="menu.html">Menu</a></li>
+            <li><a class="nav-link" href="our-story.html">Our Story</a></li>
+            <li><a class="nav-link" href="catering.html">Catering</a></li>
+            <li><a class="nav-link" href="gallery.html" aria-current="page">Gallery</a></li>
+            <li><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <button class="btn btn-primary header-cta" type="button" data-open-reservation>Reserve a Table</button>
+
+        <button class="nav-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="visually-hidden">Open menu</span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Full-screen mobile menu (tablet and mobile only) -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+      <nav class="mobile-menu-nav" aria-label="Main">
+        <ul class="mobile-menu-list">
+          <li><a class="mobile-menu-link" href="menu.html">Menu</a></li>
+          <li><a class="mobile-menu-link" href="our-story.html">Our Story</a></li>
+          <li><a class="mobile-menu-link" href="catering.html">Catering</a></li>
+          <li><a class="mobile-menu-link" href="gallery.html" aria-current="page">Gallery</a></li>
+          <li><a class="mobile-menu-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn btn-secondary mobile-menu-cta" type="button" data-open-reservation>Reserve a Table</button>
+
+      <div class="mobile-menu-footer">
+        <a class="mobile-menu-phone" href="tel:+16046320022">(604) 632-0022</a>
+        <ul class="social-list mobile-menu-social">
+          <li>
+            <a class="social-link" href="https://www.instagram.com/nonekitchenandbar/" target="_blank" rel="noopener" aria-label="Instagram (opens in a new tab)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false">
+                <rect x="3" y="3" width="18" height="18" rx="5"/>
+                <circle cx="12" cy="12" r="4.2"/>
+                <circle cx="17.4" cy="6.6" r="0.9" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="social-link" href="https://www.facebook.com/61590321897593/" target="_blank" rel="noopener" aria-label="Facebook (opens in a new tab)">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M13.5 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H7.9v3h2.6V21h3z"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="social-link" href="https://www.tiktok.com/@nonekitchenandbar" target="_blank" rel="noopener" aria-label="TikTok (opens in a new tab)">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M16.6 3c.3 2.2 1.6 3.7 3.9 3.9v3.1c-1.4.1-2.7-.3-3.9-1.1v5.9c0 3.4-2.5 5.9-5.8 5.9-3.1 0-5.6-2.5-5.6-5.6 0-3.4 2.9-6 6.4-5.5v3.2c-1.6-.4-3.2.7-3.2 2.3 0 1.4 1.1 2.4 2.4 2.4 1.5 0 2.6-1.1 2.6-2.8V3h3.2z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <main id="main" tabindex="-1">
+
+    <!-- Hero -->
+    <section class="gal-hero" aria-labelledby="gal-hero-title">
+      <div class="gal-hero-media" aria-hidden="true">
+        <img class="gal-hero-img" src="assets/images/vintage/hanoi-street-painting.jpg" alt="" width="1143" height="1391" fetchpriority="high">
+      </div>
+      <div class="gal-hero-overlay" aria-hidden="true"></div>
+
+      <div class="container gal-hero-inner">
+        <!-- Shop sign, like the vintage signs in the restaurant -->
+        <div class="shop-sign">
+          <p class="shop-sign-board" lang="vi">Hiệu Ảnh No Nê</p>
+          <p class="shop-sign-band">The No Nê Photo Studio</p>
+        </div>
+        <h1 class="section-title gal-hero-title" id="gal-hero-title">Gallery</h1>
+        <p class="gal-hero-text">Every corner holds a memory.</p>
+      </div>
+
+      <a class="gal-scroll" href="#album" data-gal-scroll>
+        <span class="gal-scroll-line" aria-hidden="true"></span>
+        Scroll to see the photos
+      </a>
+    </section>
+
+    <!-- Photo album with envelope filters -->
+    <section class="gal-album" id="album" aria-labelledby="album-title">
+      <h2 class="visually-hidden" id="album-title">Photo album</h2>
+
+      <!-- Envelope filters; shown only when JavaScript runs -->
+      <div class="gal-filters" data-filters hidden>
+        <div class="container">
+          <div class="env-row" role="tablist" aria-label="Filter photos">
+            <button class="env" type="button" role="tab" id="env-all" aria-selected="true" aria-controls="album-panel" tabindex="0" data-filter="all">
+              <span class="env-photos" aria-hidden="true"><span></span><span></span><span></span></span>
+              <span class="env-pocket" aria-hidden="true"></span>
+              <span class="env-flap" aria-hidden="true"></span>
+              <span class="env-label">
+                <span class="env-en">All</span>
+                <span class="env-count">36 photos</span>
+              </span>
+              <span class="env-stamp" aria-hidden="true">No Nê</span>
+            </button>
+            <button class="env" type="button" role="tab" id="env-food" aria-selected="false" aria-controls="album-panel" tabindex="-1" data-filter="food">
+              <span class="env-photos" aria-hidden="true"><span></span><span></span><span></span></span>
+              <span class="env-pocket" aria-hidden="true"></span>
+              <span class="env-flap" aria-hidden="true"></span>
+              <span class="env-label">
+                <span class="env-en">Food</span><span class="env-vi" lang="vi">Món ăn</span>
+                <span class="env-count">22 photos</span>
+              </span>
+              <span class="env-stamp" aria-hidden="true">No Nê</span>
+            </button>
+            <button class="env" type="button" role="tab" id="env-inside" aria-selected="false" aria-controls="album-panel" tabindex="-1" data-filter="inside">
+              <span class="env-photos" aria-hidden="true"><span></span><span></span><span></span></span>
+              <span class="env-pocket" aria-hidden="true"></span>
+              <span class="env-flap" aria-hidden="true"></span>
+              <span class="env-label">
+                <span class="env-en">Inside No Nê</span><span class="env-vi" lang="vi">Trong quán</span>
+                <span class="env-count">6 photos</span>
+              </span>
+              <span class="env-stamp" aria-hidden="true">No Nê</span>
+            </button>
+            <button class="env" type="button" role="tab" id="env-memories" aria-selected="false" aria-controls="album-panel" tabindex="-1" data-filter="memories">
+              <span class="env-photos" aria-hidden="true"><span></span><span></span><span></span></span>
+              <span class="env-pocket" aria-hidden="true"></span>
+              <span class="env-flap" aria-hidden="true"></span>
+              <span class="env-label">
+                <span class="env-en">Bao Cấp Memories</span><span class="env-vi" lang="vi">Ký ức bao cấp</span>
+                <span class="env-count">8 photos</span>
+              </span>
+              <span class="env-stamp" aria-hidden="true">No Nê</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="album-page" id="album-panel" data-album-panel>
+          <ul class="album-grid" id="album-grid" role="list" data-album>
+          <li class="album-item" data-cat="inside">
+            <a class="print" href="assets/images/gallery/large/interior-exterior-evening.jpg" style="--rot: 1.6deg;" aria-label="867 Denman St at dusk. Open larger photo" data-large="assets/images/gallery/large/interior-exterior-evening.jpg" data-large-w="1320" data-large-h="1710" data-en="867 Denman St at dusk" data-alt="867 Denman St at dusk">
+              <span class="print-tape" aria-hidden="true"></span>
+              <span class="print-photo"><img class="print-img" src="assets/images/gallery/thumbs/interior-exterior-evening.jpg" alt="867 Denman St at dusk" width="900" height="1166" loading="eager" decoding="async"></span>
+              <span class="print-caption"><span class="print-en">867 Denman St at dusk</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="food">
+            <a class="print" href="assets/images/gallery/large/dish-p1-tung-s-signature-pan-seared-beef-pho.jpg" style="--rot: 1.3deg;" aria-label="P1 Tung&#x27;s Signature Pan-seared Beef Pho. Open larger photo" data-large="assets/images/gallery/large/dish-p1-tung-s-signature-pan-seared-beef-pho.jpg" data-large-w="2000" data-large-h="1600" data-en="Tung&#x27;s Signature Pan-seared Beef Pho" data-alt="Tung&#x27;s Signature Pan-seared Beef Pho" data-vi="Phở Bò Xào Lăn Ông Tùng" data-code="P1">
+              
+              <span class="print-photo"><span class="print-corner print-corner--tl" aria-hidden="true"></span><span class="print-corner print-corner--tr" aria-hidden="true"></span><span class="print-corner print-corner--bl" aria-hidden="true"></span><span class="print-corner print-corner--br" aria-hidden="true"></span><img class="print-img" src="assets/images/gallery/thumbs/dish-p1-tung-s-signature-pan-seared-beef-pho.jpg" alt="Tung&#x27;s Signature Pan-seared Beef Pho" width="900" height="720" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-code">P1</span><span class="print-en">Tung&#x27;s Signature Pan-seared Beef Pho</span><span class="print-vi" lang="vi">Phở Bò Xào Lăn Ông Tùng</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="inside">
+            <a class="print" href="assets/images/gallery/large/interior-mural-street.jpg" style="--rot: 0.7deg;" aria-label="The painted Hanoi street mural. Open larger photo" data-large="assets/images/gallery/large/interior-mural-street.jpg" data-large-w="949" data-large-h="641" data-en="The painted Hanoi street mural" data-alt="The painted Hanoi street mural">
+              <span class="print-tape print-tape--l" aria-hidden="true"></span><span class="print-tape print-tape--r" aria-hidden="true"></span>
+              <span class="print-photo"><img class="print-img" src="assets/images/gallery/thumbs/interior-mural-street.jpg" alt="The painted Hanoi street mural" width="900" height="608" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-en">The painted Hanoi street mural</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="food">
+            <a class="print" href="assets/images/gallery/large/dish-ap4-crispy-crab-spring-rolls.jpg" style="--rot: 1.7deg;" aria-label="AP4 Crispy Crab Spring Rolls. Open larger photo" data-large="assets/images/gallery/large/dish-ap4-crispy-crab-spring-rolls.jpg" data-large-w="2000" data-large-h="1600" data-en="Crispy Crab Spring Rolls" data-alt="Crispy Crab Spring Rolls" data-vi="Nem Cua Bể" data-code="AP4">
+              <span class="print-tape" aria-hidden="true"></span>
+              <span class="print-photo"><img class="print-img" src="assets/images/gallery/thumbs/dish-ap4-crispy-crab-spring-rolls.jpg" alt="Crispy Crab Spring Rolls" width="900" height="720" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-code">AP4</span><span class="print-en">Crispy Crab Spring Rolls</span><span class="print-vi" lang="vi">Nem Cua Bể</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="food">
+            <a class="print" href="assets/images/gallery/large/dish-s4-legendary-street-food-platter.jpg" style="--rot: -0.7deg;" aria-label="S4 Legendary Street Food Platter. Open larger photo" data-large="assets/images/gallery/large/dish-s4-legendary-street-food-platter.jpg" data-large-w="668" data-large-h="514" data-en="Legendary Street Food Platter" data-alt="Legendary Street Food Platter" data-vi="Mẹt Ăn Vặt Thần Chưởng" data-code="S4">
+              
+              <span class="print-photo"><span class="print-corner print-corner--tl" aria-hidden="true"></span><span class="print-corner print-corner--tr" aria-hidden="true"></span><span class="print-corner print-corner--bl" aria-hidden="true"></span><span class="print-corner print-corner--br" aria-hidden="true"></span><img class="print-img" src="assets/images/gallery/thumbs/dish-s4-legendary-street-food-platter.jpg" alt="Legendary Street Food Platter" width="668" height="514" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-code">S4</span><span class="print-en">Legendary Street Food Platter</span><span class="print-vi" lang="vi">Mẹt Ăn Vặt Thần Chưởng</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="memories">
+            <a class="print" href="assets/images/gallery/large/vintage-hanoi-street-painting.jpg" style="--rot: -1.5deg;" aria-label="Painting. Open larger photo" data-large="assets/images/gallery/large/vintage-hanoi-street-painting.jpg" data-large-w="1143" data-large-h="1391" data-en="Painting" data-alt="Painting of a shop sign reading Tiệm tạp hoá No Nê, 867 Phố Denman" data-vi="Tiệm tạp hoá No Nê, 867 Phố Denman">
+              <span class="print-tape print-tape--l" aria-hidden="true"></span><span class="print-tape print-tape--r" aria-hidden="true"></span>
+              <span class="print-photo"><img class="print-img" src="assets/images/gallery/thumbs/vintage-hanoi-street-painting.jpg" alt="Painting of a shop sign reading Tiệm tạp hoá No Nê, 867 Phố Denman" width="900" height="1095" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-en">Painting</span><span class="print-vi" lang="vi">Tiệm tạp hoá No Nê, 867 Phố Denman</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="food">
+            <a class="print" href="assets/images/gallery/large/dish-p3-rare-beef-pho.jpg" style="--rot: 0.0deg;" aria-label="P3 Rare Beef Pho. Open larger photo" data-large="assets/images/gallery/large/dish-p3-rare-beef-pho.jpg" data-large-w="2000" data-large-h="1600" data-en="Rare Beef Pho" data-alt="Rare Beef Pho" data-vi="Phở Tái" data-code="P3">
+              <span class="print-tape" aria-hidden="true"></span>
+              <span class="print-photo"><img class="print-img" src="assets/images/gallery/thumbs/dish-p3-rare-beef-pho.jpg" alt="Rare Beef Pho" width="900" height="720" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-code">P3</span><span class="print-en">Rare Beef Pho</span><span class="print-vi" lang="vi">Phở Tái</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="food">
+            <a class="print" href="assets/images/gallery/large/dish-bv27-signature-cocktail.jpg" style="--rot: -1.1deg;" aria-label="BV27 Signature Cocktail. Open larger photo" data-large="assets/images/gallery/large/dish-bv27-signature-cocktail.jpg" data-large-w="416" data-large-h="334" data-en="Signature Cocktail" data-alt="Signature Cocktail" data-vi="What the Pho?!" data-code="BV27">
+              
+              <span class="print-photo"><span class="print-corner print-corner--tl" aria-hidden="true"></span><span class="print-corner print-corner--tr" aria-hidden="true"></span><span class="print-corner print-corner--bl" aria-hidden="true"></span><span class="print-corner print-corner--br" aria-hidden="true"></span><img class="print-img" src="assets/images/gallery/thumbs/dish-bv27-signature-cocktail.jpg" alt="Signature Cocktail" width="416" height="334" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-code">BV27</span><span class="print-en">Signature Cocktail</span><span class="print-vi">What the Pho?!</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="inside">
+            <a class="print" href="assets/images/gallery/large/interior-hanging-signs.jpg" style="--rot: 2.0deg;" aria-label="Vintage Hanoi shop signs. Open larger photo" data-large="assets/images/gallery/large/interior-hanging-signs.jpg" data-large-w="1320" data-large-h="1730" data-en="Vintage Hanoi shop signs" data-alt="Vintage Hanoi shop signs">
+              <span class="print-tape print-tape--l" aria-hidden="true"></span><span class="print-tape print-tape--r" aria-hidden="true"></span>
+              <span class="print-photo"><img class="print-img" src="assets/images/gallery/thumbs/interior-hanging-signs.jpg" alt="Vintage Hanoi shop signs" width="900" height="1179" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-en">Vintage Hanoi shop signs</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="food">
+            <a class="print" href="assets/images/gallery/large/dish-v2-grilled-pork-vermicelli-with-spring-rolls.jpg" style="--rot: 1.1deg;" aria-label="V2 Grilled Pork Vermicelli with Spring Rolls. Open larger photo" data-large="assets/images/gallery/large/dish-v2-grilled-pork-vermicelli-with-spring-rolls.jpg" data-large-w="2000" data-large-h="1600" data-en="Grilled Pork Vermicelli with Spring Rolls" data-alt="Grilled Pork Vermicelli with Spring Rolls" data-vi="Bún Chả – Nem" data-code="V2">
+              <span class="print-tape" aria-hidden="true"></span>
+              <span class="print-photo"><img class="print-img" src="assets/images/gallery/thumbs/dish-v2-grilled-pork-vermicelli-with-spring-rolls.jpg" alt="Grilled Pork Vermicelli with Spring Rolls" width="900" height="720" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-code">V2</span><span class="print-en">Grilled Pork Vermicelli with Spring Rolls</span><span class="print-vi" lang="vi">Bún Chả – Nem</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="memories">
+            <a class="print" href="assets/images/gallery/large/vintage-baocap-mau-dich-queue.jpg" style="--rot: -1.2deg;" aria-label="Queuing at a state-run beer counter, archival photograph. Open larger photo" data-large="assets/images/gallery/large/vintage-baocap-mau-dich-queue.jpg" data-large-w="1600" data-large-h="1112" data-en="Queuing at a state-run beer counter" data-alt="Queuing at a state-run beer counter" data-archival="true">
+              
+              <span class="print-photo"><span class="print-corner print-corner--tl" aria-hidden="true"></span><span class="print-corner print-corner--tr" aria-hidden="true"></span><span class="print-corner print-corner--bl" aria-hidden="true"></span><span class="print-corner print-corner--br" aria-hidden="true"></span><img class="print-img" src="assets/images/gallery/thumbs/vintage-baocap-mau-dich-queue.jpg" alt="Queuing at a state-run beer counter" width="900" height="625" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-en">Queuing at a state-run beer counter</span><span class="print-note">Archival photograph</span></span><span class="print-stamp" aria-hidden="true">Archival</span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="food">
+            <a class="print" href="assets/images/gallery/large/dish-ap9-vietnamese-beef-salad.jpg" style="--rot: -0.1deg;" aria-label="AP9 Vietnamese Beef Salad. Open larger photo" data-large="assets/images/gallery/large/dish-ap9-vietnamese-beef-salad.jpg" data-large-w="2000" data-large-h="1600" data-en="Vietnamese Beef Salad" data-alt="Vietnamese Beef Salad" data-vi="Gỏi Bò Bóp Thấu" data-code="AP9">
+              <span class="print-tape print-tape--l" aria-hidden="true"></span><span class="print-tape print-tape--r" aria-hidden="true"></span>
+              <span class="print-photo"><img class="print-img" src="assets/images/gallery/thumbs/dish-ap9-vietnamese-beef-salad.jpg" alt="Vietnamese Beef Salad" width="900" height="720" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-code">AP9</span><span class="print-en">Vietnamese Beef Salad</span><span class="print-vi" lang="vi">Gỏi Bò Bóp Thấu</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="food">
+            <a class="print" href="assets/images/gallery/large/dish-p12-lemongrass-chicken-pho.jpg" style="--rot: 1.7deg;" aria-label="P12 Lemongrass Chicken Pho. Open larger photo" data-large="assets/images/gallery/large/dish-p12-lemongrass-chicken-pho.jpg" data-large-w="2000" data-large-h="1600" data-en="Lemongrass Chicken Pho" data-alt="Lemongrass Chicken Pho" data-vi="Phở Gà Nướng Sả" data-code="P12">
+              <span class="print-tape" aria-hidden="true"></span>
+              <span class="print-photo"><img class="print-img" src="assets/images/gallery/thumbs/dish-p12-lemongrass-chicken-pho.jpg" alt="Lemongrass Chicken Pho" width="900" height="720" loading="eager" decoding="async"></span>
+              <span class="print-caption"><span class="print-code">P12</span><span class="print-en">Lemongrass Chicken Pho</span><span class="print-vi" lang="vi">Phở Gà Nướng Sả</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="inside">
+            <a class="print" href="assets/images/gallery/large/interior-corner-shutters.jpg" style="--rot: 0.8deg;" aria-label="Yellow walls and blue shutters. Open larger photo" data-large="assets/images/gallery/large/interior-corner-shutters.jpg" data-large-w="1320" data-large-h="1714" data-en="Yellow walls and blue shutters" data-alt="Yellow walls and blue shutters">
+              
+              <span class="print-photo"><span class="print-corner print-corner--tl" aria-hidden="true"></span><span class="print-corner print-corner--tr" aria-hidden="true"></span><span class="print-corner print-corner--bl" aria-hidden="true"></span><span class="print-corner print-corner--br" aria-hidden="true"></span><img class="print-img" src="assets/images/gallery/thumbs/interior-corner-shutters.jpg" alt="Yellow walls and blue shutters" width="900" height="1168" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-en">Yellow walls and blue shutters</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="food">
+            <a class="print" href="assets/images/gallery/large/dish-v1-hanoi-style-grilled-pork-vermicelli.jpg" style="--rot: 2.5deg;" aria-label="V1 Hanoi-style Grilled Pork Vermicelli. Open larger photo" data-large="assets/images/gallery/large/dish-v1-hanoi-style-grilled-pork-vermicelli.jpg" data-large-w="2000" data-large-h="1600" data-en="Hanoi-style Grilled Pork Vermicelli" data-alt="Hanoi-style Grilled Pork Vermicelli" data-vi="Bún Chả Hàng Mành" data-code="V1">
+              <span class="print-tape print-tape--l" aria-hidden="true"></span><span class="print-tape print-tape--r" aria-hidden="true"></span>
+              <span class="print-photo"><img class="print-img" src="assets/images/gallery/thumbs/dish-v1-hanoi-style-grilled-pork-vermicelli.jpg" alt="Hanoi-style Grilled Pork Vermicelli" width="900" height="720" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-code">V1</span><span class="print-en">Hanoi-style Grilled Pork Vermicelli</span><span class="print-vi" lang="vi">Bún Chả Hàng Mành</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="food">
+            <a class="print" href="assets/images/gallery/large/dish-bv1-vietnamese-iced-or-hot-coffee-with-condensed-milk.jpg" style="--rot: -1.5deg;" aria-label="BV1 Vietnamese Iced or Hot Coffee with Condensed Milk. Open larger photo" data-large="assets/images/gallery/large/dish-bv1-vietnamese-iced-or-hot-coffee-with-condensed-milk.jpg" data-large-w="2000" data-large-h="1600" data-en="Vietnamese Iced or Hot Coffee with Condensed Milk" data-alt="Vietnamese Iced or Hot Coffee with Condensed Milk" data-vi="Drama Nóng – Tình Lạnh" data-code="BV1">
+              <span class="print-tape" aria-hidden="true"></span>
+              <span class="print-photo"><img class="print-img" src="assets/images/gallery/thumbs/dish-bv1-vietnamese-iced-or-hot-coffee-with-condensed-milk.jpg" alt="Vietnamese Iced or Hot Coffee with Condensed Milk" width="900" height="720" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-code">BV1</span><span class="print-en">Vietnamese Iced or Hot Coffee with Condensed Milk</span><span class="print-vi" lang="vi">Drama Nóng – Tình Lạnh</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="memories">
+            <a class="print" href="assets/images/gallery/large/vintage-baocap-street-vendors.jpg" style="--rot: -1.2deg;" aria-label="A street food vendor and her young customers, archival photograph. Open larger photo" data-large="assets/images/gallery/large/vintage-baocap-street-vendors.jpg" data-large-w="970" data-large-h="605" data-en="A street food vendor and her young customers" data-alt="A street food vendor and her young customers" data-archival="true">
+              
+              <span class="print-photo"><span class="print-corner print-corner--tl" aria-hidden="true"></span><span class="print-corner print-corner--tr" aria-hidden="true"></span><span class="print-corner print-corner--bl" aria-hidden="true"></span><span class="print-corner print-corner--br" aria-hidden="true"></span><img class="print-img" src="assets/images/gallery/thumbs/vintage-baocap-street-vendors.jpg" alt="A street food vendor and her young customers" width="900" height="561" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-en">A street food vendor and her young customers</span><span class="print-note">Archival photograph</span></span><span class="print-stamp" aria-hidden="true">Archival</span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="food">
+            <a class="print" href="assets/images/gallery/large/dish-s3-deep-fried-pork-rolls.jpg" style="--rot: 1.7deg;" aria-label="S3 Deep Fried Pork Rolls. Open larger photo" data-large="assets/images/gallery/large/dish-s3-deep-fried-pork-rolls.jpg" data-large-w="2000" data-large-h="1600" data-en="Deep Fried Pork Rolls" data-alt="Deep Fried Pork Rolls" data-vi="Nem Chua Rán" data-code="S3">
+              <span class="print-tape print-tape--l" aria-hidden="true"></span><span class="print-tape print-tape--r" aria-hidden="true"></span>
+              <span class="print-photo"><img class="print-img" src="assets/images/gallery/thumbs/dish-s3-deep-fried-pork-rolls.jpg" alt="Deep Fried Pork Rolls" width="900" height="720" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-code">S3</span><span class="print-en">Deep Fried Pork Rolls</span><span class="print-vi" lang="vi">Nem Chua Rán</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="food">
+            <a class="print" href="assets/images/gallery/large/dish-p4-rare-beef-brisket-pho.jpg" style="--rot: -0.8deg;" aria-label="P4 Rare Beef &amp; Brisket Pho. Open larger photo" data-large="assets/images/gallery/large/dish-p4-rare-beef-brisket-pho.jpg" data-large-w="2000" data-large-h="1600" data-en="Rare Beef &amp; Brisket Pho" data-alt="Rare Beef &amp; Brisket Pho" data-vi="Phở Tái Nạm" data-code="P4">
+              <span class="print-tape" aria-hidden="true"></span>
+              <span class="print-photo"><img class="print-img" src="assets/images/gallery/thumbs/dish-p4-rare-beef-brisket-pho.jpg" alt="Rare Beef &amp; Brisket Pho" width="900" height="720" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-code">P4</span><span class="print-en">Rare Beef &amp; Brisket Pho</span><span class="print-vi" lang="vi">Phở Tái Nạm</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="inside">
+            <a class="print" href="assets/images/gallery/large/interior-wall-mascot-poster.jpg" style="--rot: 0.1deg;" aria-label="The No Nê mascot poster. Open larger photo" data-large="assets/images/gallery/large/interior-wall-mascot-poster.jpg" data-large-w="1320" data-large-h="950" data-en="The No Nê mascot poster" data-alt="The No Nê mascot poster">
+              
+              <span class="print-photo"><span class="print-corner print-corner--tl" aria-hidden="true"></span><span class="print-corner print-corner--tr" aria-hidden="true"></span><span class="print-corner print-corner--bl" aria-hidden="true"></span><span class="print-corner print-corner--br" aria-hidden="true"></span><img class="print-img" src="assets/images/gallery/thumbs/interior-wall-mascot-poster.jpg" alt="The No Nê mascot poster" width="900" height="647" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-en">The No Nê mascot poster</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="food">
+            <a class="print" href="assets/images/gallery/large/dish-v4-noodles-with-fermented-shrimp-paste-tofu.jpg" style="--rot: -0.9deg;" aria-label="V4 Noodles with Fermented Shrimp Paste &amp; Tofu. Open larger photo" data-large="assets/images/gallery/large/dish-v4-noodles-with-fermented-shrimp-paste-tofu.jpg" data-large-w="2000" data-large-h="1600" data-en="Noodles with Fermented Shrimp Paste &amp; Tofu" data-alt="Noodles with Fermented Shrimp Paste &amp; Tofu" data-vi="Bún Đậu Mắm Tôm Phát Lộc" data-code="V4">
+              <span class="print-tape print-tape--l" aria-hidden="true"></span><span class="print-tape print-tape--r" aria-hidden="true"></span>
+              <span class="print-photo"><img class="print-img" src="assets/images/gallery/thumbs/dish-v4-noodles-with-fermented-shrimp-paste-tofu.jpg" alt="Noodles with Fermented Shrimp Paste &amp; Tofu" width="900" height="720" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-code">V4</span><span class="print-en">Noodles with Fermented Shrimp Paste &amp; Tofu</span><span class="print-vi" lang="vi">Bún Đậu Mắm Tôm Phát Lộc</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="food">
+            <a class="print" href="assets/images/gallery/large/dish-r8-lemongrass-chicken-with-rice-imperial-spring-rolls.jpg" style="--rot: 0.2deg;" aria-label="R8 Lemongrass Chicken with Rice &amp; Imperial Spring Rolls. Open larger photo" data-large="assets/images/gallery/large/dish-r8-lemongrass-chicken-with-rice-imperial-spring-rolls.jpg" data-large-w="2000" data-large-h="1600" data-en="Lemongrass Chicken with Rice &amp; Imperial Spring Rolls" data-alt="Lemongrass Chicken with Rice &amp; Imperial Spring Rolls" data-vi="Cơm Gà Sả Chả Giò" data-code="R8">
+              <span class="print-tape" aria-hidden="true"></span>
+              <span class="print-photo"><img class="print-img" src="assets/images/gallery/thumbs/dish-r8-lemongrass-chicken-with-rice-imperial-spring-rolls.jpg" alt="Lemongrass Chicken with Rice &amp; Imperial Spring Rolls" width="900" height="720" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-code">R8</span><span class="print-en">Lemongrass Chicken with Rice &amp; Imperial Spring Rolls</span><span class="print-vi" lang="vi">Cơm Gà Sả Chả Giò</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="memories">
+            <a class="print" href="assets/images/gallery/large/vintage-baocap-shop-counter.jpg" style="--rot: 1.1deg;" aria-label="A state-run retail shop, archival photograph. Open larger photo" data-large="assets/images/gallery/large/vintage-baocap-shop-counter.jpg" data-large-w="955" data-large-h="1335" data-en="A state-run retail shop" data-alt="A state-run retail shop" data-archival="true">
+              
+              <span class="print-photo"><span class="print-corner print-corner--tl" aria-hidden="true"></span><span class="print-corner print-corner--tr" aria-hidden="true"></span><span class="print-corner print-corner--bl" aria-hidden="true"></span><span class="print-corner print-corner--br" aria-hidden="true"></span><img class="print-img" src="assets/images/gallery/thumbs/vintage-baocap-shop-counter.jpg" alt="A state-run retail shop" width="900" height="1258" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-en">A state-run retail shop</span><span class="print-note">Archival photograph</span></span><span class="print-stamp" aria-hidden="true">Archival</span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="food">
+            <a class="print" href="assets/images/gallery/large/dish-p11-beef-stew-pho.jpg" style="--rot: -0.5deg;" aria-label="P11 Beef Stew Pho. Open larger photo" data-large="assets/images/gallery/large/dish-p11-beef-stew-pho.jpg" data-large-w="2000" data-large-h="1600" data-en="Beef Stew Pho" data-alt="Beef Stew Pho" data-vi="Phở Sốt Vang" data-code="P11">
+              <span class="print-tape print-tape--l" aria-hidden="true"></span><span class="print-tape print-tape--r" aria-hidden="true"></span>
+              <span class="print-photo"><img class="print-img" src="assets/images/gallery/thumbs/dish-p11-beef-stew-pho.jpg" alt="Beef Stew Pho" width="900" height="720" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-code">P11</span><span class="print-en">Beef Stew Pho</span><span class="print-vi" lang="vi">Phở Sốt Vang</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="food">
+            <a class="print" href="assets/images/gallery/large/dish-bv18-cheese-foam-matcha-latte.jpg" style="--rot: -2.1deg;" aria-label="BV18 Cheese Foam Matcha Latte. Open larger photo" data-large="assets/images/gallery/large/dish-bv18-cheese-foam-matcha-latte.jpg" data-large-w="2000" data-large-h="1600" data-en="Cheese Foam Matcha Latte" data-alt="Cheese Foam Matcha Latte" data-vi="Matcha Mây" data-code="BV18">
+              <span class="print-tape" aria-hidden="true"></span>
+              <span class="print-photo"><img class="print-img" src="assets/images/gallery/thumbs/dish-bv18-cheese-foam-matcha-latte.jpg" alt="Cheese Foam Matcha Latte" width="900" height="720" loading="eager" decoding="async"></span>
+              <span class="print-caption"><span class="print-code">BV18</span><span class="print-en">Cheese Foam Matcha Latte</span><span class="print-vi" lang="vi">Matcha Mây</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="inside">
+            <a class="print" href="assets/images/gallery/large/interior-exterior-day.jpg" style="--rot: 0.5deg;" aria-label="867 Denman St by day. Open larger photo" data-large="assets/images/gallery/large/interior-exterior-day.jpg" data-large-w="1320" data-large-h="1727" data-en="867 Denman St by day" data-alt="867 Denman St by day">
+              
+              <span class="print-photo"><span class="print-corner print-corner--tl" aria-hidden="true"></span><span class="print-corner print-corner--tr" aria-hidden="true"></span><span class="print-corner print-corner--bl" aria-hidden="true"></span><span class="print-corner print-corner--br" aria-hidden="true"></span><img class="print-img" src="assets/images/gallery/thumbs/interior-exterior-day.jpg" alt="867 Denman St by day" width="900" height="1177" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-en">867 Denman St by day</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="food">
+            <a class="print" href="assets/images/gallery/large/dish-v3-deep-fried-crab-spring-rolls-vermicelli.jpg" style="--rot: -2.1deg;" aria-label="V3 Deep Fried Crab Spring Rolls Vermicelli. Open larger photo" data-large="assets/images/gallery/large/dish-v3-deep-fried-crab-spring-rolls-vermicelli.jpg" data-large-w="2000" data-large-h="1600" data-en="Deep Fried Crab Spring Rolls Vermicelli" data-alt="Deep Fried Crab Spring Rolls Vermicelli" data-vi="Bún Nem Cua Bể" data-code="V3">
+              <span class="print-tape print-tape--l" aria-hidden="true"></span><span class="print-tape print-tape--r" aria-hidden="true"></span>
+              <span class="print-photo"><img class="print-img" src="assets/images/gallery/thumbs/dish-v3-deep-fried-crab-spring-rolls-vermicelli.jpg" alt="Deep Fried Crab Spring Rolls Vermicelli" width="900" height="720" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-code">V3</span><span class="print-en">Deep Fried Crab Spring Rolls Vermicelli</span><span class="print-vi" lang="vi">Bún Nem Cua Bể</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="food">
+            <a class="print" href="assets/images/gallery/large/dish-p13-sliced-free-range-chicken-pho.jpg" style="--rot: -0.3deg;" aria-label="P13 Sliced Free-range Chicken Pho. Open larger photo" data-large="assets/images/gallery/large/dish-p13-sliced-free-range-chicken-pho.jpg" data-large-w="2000" data-large-h="1600" data-en="Sliced Free-range Chicken Pho" data-alt="Sliced Free-range Chicken Pho" data-vi="Phở Gà Lãn Ông" data-code="P13">
+              <span class="print-tape" aria-hidden="true"></span>
+              <span class="print-photo"><img class="print-img" src="assets/images/gallery/thumbs/dish-p13-sliced-free-range-chicken-pho.jpg" alt="Sliced Free-range Chicken Pho" width="900" height="720" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-code">P13</span><span class="print-en">Sliced Free-range Chicken Pho</span><span class="print-vi" lang="vi">Phở Gà Lãn Ông</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="memories">
+            <a class="print" href="assets/images/gallery/large/vintage-baocap-shop-queue.jpg" style="--rot: -1.2deg;" aria-label="Shopping with ration coupons, archival photograph. Open larger photo" data-large="assets/images/gallery/large/vintage-baocap-shop-queue.jpg" data-large-w="955" data-large-h="600" data-en="Shopping with ration coupons" data-alt="Shopping with ration coupons" data-archival="true">
+              
+              <span class="print-photo"><span class="print-corner print-corner--tl" aria-hidden="true"></span><span class="print-corner print-corner--tr" aria-hidden="true"></span><span class="print-corner print-corner--bl" aria-hidden="true"></span><span class="print-corner print-corner--br" aria-hidden="true"></span><img class="print-img" src="assets/images/gallery/thumbs/vintage-baocap-shop-queue.jpg" alt="Shopping with ration coupons" width="900" height="565" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-en">Shopping with ration coupons</span><span class="print-note">Archival photograph</span></span><span class="print-stamp" aria-hidden="true">Archival</span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="food">
+            <a class="print" href="assets/images/gallery/large/dish-v9-lemongrass-chicken-vermicelli.jpg" style="--rot: -0.8deg;" aria-label="V9 Lemongrass Chicken Vermicelli. Open larger photo" data-large="assets/images/gallery/large/dish-v9-lemongrass-chicken-vermicelli.jpg" data-large-w="2000" data-large-h="1600" data-en="Lemongrass Chicken Vermicelli" data-alt="Lemongrass Chicken Vermicelli" data-vi="Bún Gà Sả" data-code="V9">
+              <span class="print-tape print-tape--l" aria-hidden="true"></span><span class="print-tape print-tape--r" aria-hidden="true"></span>
+              <span class="print-photo"><img class="print-img" src="assets/images/gallery/thumbs/dish-v9-lemongrass-chicken-vermicelli.jpg" alt="Lemongrass Chicken Vermicelli" width="900" height="720" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-code">V9</span><span class="print-en">Lemongrass Chicken Vermicelli</span><span class="print-vi" lang="vi">Bún Gà Sả</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="food">
+            <a class="print" href="assets/images/gallery/large/dish-r9-lemongrass-chicken-with-rice-egg.jpg" style="--rot: 1.8deg;" aria-label="R9 Lemongrass Chicken with Rice &amp; Egg. Open larger photo" data-large="assets/images/gallery/large/dish-r9-lemongrass-chicken-with-rice-egg.jpg" data-large-w="2000" data-large-h="1600" data-en="Lemongrass Chicken with Rice &amp; Egg" data-alt="Lemongrass Chicken with Rice &amp; Egg" data-vi="Cơm Gà Sả &amp; Trứng" data-code="R9">
+              <span class="print-tape" aria-hidden="true"></span>
+              <span class="print-photo"><img class="print-img" src="assets/images/gallery/thumbs/dish-r9-lemongrass-chicken-with-rice-egg.jpg" alt="Lemongrass Chicken with Rice &amp; Egg" width="900" height="720" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-code">R9</span><span class="print-en">Lemongrass Chicken with Rice &amp; Egg</span><span class="print-vi" lang="vi">Cơm Gà Sả &amp; Trứng</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="memories">
+            <a class="print" href="assets/images/gallery/large/vintage-baocap-watching-tv.jpg" style="--rot: 1.1deg;" aria-label="Gathering around a neighbour&#x27;s television, archival photograph. Open larger photo" data-large="assets/images/gallery/large/vintage-baocap-watching-tv.jpg" data-large-w="965" data-large-h="845" data-en="Gathering around a neighbour&#x27;s television" data-alt="Gathering around a neighbour&#x27;s television" data-archival="true">
+              
+              <span class="print-photo"><span class="print-corner print-corner--tl" aria-hidden="true"></span><span class="print-corner print-corner--tr" aria-hidden="true"></span><span class="print-corner print-corner--bl" aria-hidden="true"></span><span class="print-corner print-corner--br" aria-hidden="true"></span><img class="print-img" src="assets/images/gallery/thumbs/vintage-baocap-watching-tv.jpg" alt="Gathering around a neighbour&#x27;s television" width="900" height="788" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-en">Gathering around a neighbour&#x27;s television</span><span class="print-note">Archival photograph</span></span><span class="print-stamp" aria-hidden="true">Archival</span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="food">
+            <a class="print" href="assets/images/gallery/large/dish-ve5-vegetarian-pho-noodle-soup.jpg" style="--rot: 0.5deg;" aria-label="VE5 Vegetarian Pho Noodle Soup. Open larger photo" data-large="assets/images/gallery/large/dish-ve5-vegetarian-pho-noodle-soup.jpg" data-large-w="2000" data-large-h="1600" data-en="Vegetarian Pho Noodle Soup" data-alt="Vegetarian Pho Noodle Soup" data-vi="Phở Chay" data-code="VE5">
+              <span class="print-tape print-tape--l" aria-hidden="true"></span><span class="print-tape print-tape--r" aria-hidden="true"></span>
+              <span class="print-photo"><img class="print-img" src="assets/images/gallery/thumbs/dish-ve5-vegetarian-pho-noodle-soup.jpg" alt="Vegetarian Pho Noodle Soup" width="900" height="720" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-code">VE5</span><span class="print-en">Vegetarian Pho Noodle Soup</span><span class="print-vi" lang="vi">Phở Chay</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="food">
+            <a class="print" href="assets/images/gallery/large/dish-bv20-strawberry-matcha-latte.jpg" style="--rot: -1.0deg;" aria-label="BV20 Strawberry Matcha Latte. Open larger photo" data-large="assets/images/gallery/large/dish-bv20-strawberry-matcha-latte.jpg" data-large-w="2000" data-large-h="1600" data-en="Strawberry Matcha Latte" data-alt="Strawberry Matcha Latte" data-vi="Matcha Nhưng Lỡ Mê Dâu" data-code="BV20">
+              <span class="print-tape" aria-hidden="true"></span>
+              <span class="print-photo"><img class="print-img" src="assets/images/gallery/thumbs/dish-bv20-strawberry-matcha-latte.jpg" alt="Strawberry Matcha Latte" width="900" height="720" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-code">BV20</span><span class="print-en">Strawberry Matcha Latte</span><span class="print-vi" lang="vi">Matcha Nhưng Lỡ Mê Dâu</span></span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="memories">
+            <a class="print" href="assets/images/gallery/large/vintage-baocap-reading-newspaper.jpg" style="--rot: 0.3deg;" aria-label="A fresh food stall, archival photograph. Open larger photo" data-large="assets/images/gallery/large/vintage-baocap-reading-newspaper.jpg" data-large-w="970" data-large-h="595" data-en="A fresh food stall" data-alt="A fresh food stall" data-archival="true">
+              
+              <span class="print-photo"><span class="print-corner print-corner--tl" aria-hidden="true"></span><span class="print-corner print-corner--tr" aria-hidden="true"></span><span class="print-corner print-corner--bl" aria-hidden="true"></span><span class="print-corner print-corner--br" aria-hidden="true"></span><img class="print-img" src="assets/images/gallery/thumbs/vintage-baocap-reading-newspaper.jpg" alt="A fresh food stall" width="900" height="552" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-en">A fresh food stall</span><span class="print-note">Archival photograph</span></span><span class="print-stamp" aria-hidden="true">Archival</span>
+            </a>
+          </li>
+          <li class="album-item" data-cat="memories">
+            <a class="print" href="assets/images/gallery/large/vintage-baocap-ration-ticket-250g.jpg" style="--rot: -0.8deg;" aria-label="A 250-gram food ration coupon, archival photograph. Open larger photo" data-large="assets/images/gallery/large/vintage-baocap-ration-ticket-250g.jpg" data-large-w="1370" data-large-h="890" data-en="A 250-gram food ration coupon" data-alt="A 250-gram food ration coupon" data-archival="true">
+              <span class="print-tape print-tape--l" aria-hidden="true"></span><span class="print-tape print-tape--r" aria-hidden="true"></span>
+              <span class="print-photo"><img class="print-img" src="assets/images/gallery/thumbs/vintage-baocap-ration-ticket-250g.jpg" alt="A 250-gram food ration coupon" width="900" height="584" loading="lazy" decoding="async"></span>
+              <span class="print-caption"><span class="print-en">A 250-gram food ration coupon</span><span class="print-note">Archival photograph</span></span><span class="print-stamp" aria-hidden="true">Archival</span>
+            </a>
+          </li>
+          </ul>
+          <p class="visually-hidden" aria-live="polite" data-filter-status></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Darkroom drying line -->
+    <section class="section darkroom" aria-labelledby="darkroom-title">
+      <div class="darkroom-glow" aria-hidden="true"></div>
+      <div class="container darkroom-head">
+        <p class="section-eyebrow">
+          <span class="section-eyebrow-num" lang="vi">Buồng tối</span>
+          <span>The Darkroom</span>
+        </p>
+        <h2 class="section-title" id="darkroom-title">Bao Cấp Memories</h2>
+        <p class="darkroom-text">Archival photographs of the bao cấp era.</p>
+      </div>
+
+      <div class="line-wrap">
+        <button class="line-arrow line-arrow--prev" type="button" aria-label="Scroll photos left" aria-controls="drying-line" data-line-prev hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <div class="line-track" id="drying-line" tabindex="0" role="region" aria-label="Archival photographs, scroll sideways" data-line>
+          <ul class="line" role="list" data-line-list>
+              <li class="hang" style="--sway-d: 3.82s; --sway-delay: -1.88s; --sway-a: 1.29deg;">
+                <div class="hang-swing">
+                  <span class="peg" aria-hidden="true"></span>
+                  <a class="hang-print" href="assets/images/gallery/large/vintage-baocap-mau-dich-queue.jpg" aria-label="Queuing at a state-run beer counter, archival photograph. Open larger photo" data-large="assets/images/gallery/large/vintage-baocap-mau-dich-queue.jpg" data-large-w="1600" data-large-h="1112" data-en="Queuing at a state-run beer counter" data-alt="Queuing at a state-run beer counter" data-archival="true">
+                    <img src="assets/images/gallery/thumbs/vintage-baocap-mau-dich-queue.jpg" alt="Queuing at a state-run beer counter" width="900" height="625" loading="lazy" decoding="async">
+                    <span class="hang-caption">Queuing at a state-run beer counter</span>
+                  </a>
+                </div>
+              </li>
+              <li class="hang" style="--sway-d: 4.2s; --sway-delay: -3.61s; --sway-a: 1.35deg;">
+                <div class="hang-swing">
+                  <span class="peg" aria-hidden="true"></span>
+                  <a class="hang-print" href="assets/images/gallery/large/vintage-baocap-street-vendors.jpg" aria-label="A street food vendor and her young customers, archival photograph. Open larger photo" data-large="assets/images/gallery/large/vintage-baocap-street-vendors.jpg" data-large-w="970" data-large-h="605" data-en="A street food vendor and her young customers" data-alt="A street food vendor and her young customers" data-archival="true">
+                    <img src="assets/images/gallery/thumbs/vintage-baocap-street-vendors.jpg" alt="A street food vendor and her young customers" width="900" height="561" loading="lazy" decoding="async">
+                    <span class="hang-caption">A street food vendor and her young customers</span>
+                  </a>
+                </div>
+              </li>
+              <li class="hang" style="--sway-d: 4.61s; --sway-delay: -1.9s; --sway-a: 1.42deg;">
+                <div class="hang-swing">
+                  <span class="peg" aria-hidden="true"></span>
+                  <a class="hang-print" href="assets/images/gallery/large/vintage-baocap-shop-counter.jpg" aria-label="A state-run retail shop, archival photograph. Open larger photo" data-large="assets/images/gallery/large/vintage-baocap-shop-counter.jpg" data-large-w="955" data-large-h="1335" data-en="A state-run retail shop" data-alt="A state-run retail shop" data-archival="true">
+                    <img src="assets/images/gallery/thumbs/vintage-baocap-shop-counter.jpg" alt="A state-run retail shop" width="900" height="1258" loading="lazy" decoding="async">
+                    <span class="hang-caption">A state-run retail shop</span>
+                  </a>
+                </div>
+              </li>
+              <li class="hang" style="--sway-d: 3.89s; --sway-delay: -1.16s; --sway-a: 1.09deg;">
+                <div class="hang-swing">
+                  <span class="peg" aria-hidden="true"></span>
+                  <a class="hang-print" href="assets/images/gallery/large/vintage-baocap-shop-queue.jpg" aria-label="Shopping with ration coupons, archival photograph. Open larger photo" data-large="assets/images/gallery/large/vintage-baocap-shop-queue.jpg" data-large-w="955" data-large-h="600" data-en="Shopping with ration coupons" data-alt="Shopping with ration coupons" data-archival="true">
+                    <img src="assets/images/gallery/thumbs/vintage-baocap-shop-queue.jpg" alt="Shopping with ration coupons" width="900" height="565" loading="lazy" decoding="async">
+                    <span class="hang-caption">Shopping with ration coupons</span>
+                  </a>
+                </div>
+              </li>
+              <li class="hang" style="--sway-d: 5.25s; --sway-delay: -2.09s; --sway-a: 1.07deg;">
+                <div class="hang-swing">
+                  <span class="peg" aria-hidden="true"></span>
+                  <a class="hang-print" href="assets/images/gallery/large/vintage-baocap-watching-tv.jpg" aria-label="Gathering around a neighbour&#x27;s television, archival photograph. Open larger photo" data-large="assets/images/gallery/large/vintage-baocap-watching-tv.jpg" data-large-w="965" data-large-h="845" data-en="Gathering around a neighbour&#x27;s television" data-alt="Gathering around a neighbour&#x27;s television" data-archival="true">
+                    <img src="assets/images/gallery/thumbs/vintage-baocap-watching-tv.jpg" alt="Gathering around a neighbour&#x27;s television" width="900" height="788" loading="lazy" decoding="async">
+                    <span class="hang-caption">Gathering around a neighbour&#x27;s television</span>
+                  </a>
+                </div>
+              </li>
+              <li class="hang" style="--sway-d: 4.8s; --sway-delay: -2.31s; --sway-a: 0.94deg;">
+                <div class="hang-swing">
+                  <span class="peg" aria-hidden="true"></span>
+                  <a class="hang-print" href="assets/images/gallery/large/vintage-baocap-reading-newspaper.jpg" aria-label="A fresh food stall, archival photograph. Open larger photo" data-large="assets/images/gallery/large/vintage-baocap-reading-newspaper.jpg" data-large-w="970" data-large-h="595" data-en="A fresh food stall" data-alt="A fresh food stall" data-archival="true">
+                    <img src="assets/images/gallery/thumbs/vintage-baocap-reading-newspaper.jpg" alt="A fresh food stall" width="900" height="552" loading="lazy" decoding="async">
+                    <span class="hang-caption">A fresh food stall</span>
+                  </a>
+                </div>
+              </li>
+              <li class="hang" style="--sway-d: 4.77s; --sway-delay: -3.97s; --sway-a: 1.24deg;">
+                <div class="hang-swing">
+                  <span class="peg" aria-hidden="true"></span>
+                  <a class="hang-print" href="assets/images/gallery/large/vintage-baocap-ration-ticket-250g.jpg" aria-label="A 250-gram food ration coupon, archival photograph. Open larger photo" data-large="assets/images/gallery/large/vintage-baocap-ration-ticket-250g.jpg" data-large-w="1370" data-large-h="890" data-en="A 250-gram food ration coupon" data-alt="A 250-gram food ration coupon" data-archival="true">
+                    <img src="assets/images/gallery/thumbs/vintage-baocap-ration-ticket-250g.jpg" alt="A 250-gram food ration coupon" width="900" height="584" loading="lazy" decoding="async">
+                    <span class="hang-caption">A 250-gram food ration coupon</span>
+                  </a>
+                </div>
+              </li>
+          </ul>
+        </div>
+        <button class="line-arrow line-arrow--next" type="button" aria-label="Scroll photos right" aria-controls="drying-line" data-line-next hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- Closing -->
+    <section class="section gal-closing" aria-labelledby="gal-closing-title">
+      <div class="container gal-closing-inner">
+        <svg class="gal-camera" viewBox="0 0 64 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="12" width="56" height="32" rx="3"/><path d="M20 12l4-7h16l4 7"/><circle cx="32" cy="28" r="10"/><circle cx="32" cy="28" r="5"/><path d="M10 18h6"/></svg>
+        <h2 class="section-title gal-closing-title" id="gal-closing-title">See more on Instagram</h2>
+        <p class="gal-closing-text">
+          <a href="https://www.instagram.com/nonekitchenandbar/" target="_blank" rel="noopener">@nonekitchenandbar<span class="visually-hidden"> (opens in a new tab)</span></a>
+        </p>
+        <div class="gal-closing-actions">
+          <button class="btn btn-primary" type="button" data-open-reservation>Reserve a Table</button>
+          <a class="btn btn-outline" href="menu.html">See the Menu</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Photo lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" aria-hidden="true" data-lightbox>
+    <div class="lightbox-backdrop" data-lb-close></div>
+    <div class="lightbox-inner">
+      <button class="lightbox-btn lightbox-close" type="button" aria-label="Close photo viewer" data-lb-close>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+      <button class="lightbox-btn lightbox-prev" type="button" aria-label="Previous photo" data-lb-prev>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <figure class="lightbox-figure">
+        <div class="lightbox-stage" data-lb-stage>
+          <img class="lightbox-img is-current" alt="" width="2000" height="1600" data-lb-img>
+          <img class="lightbox-img" alt="" aria-hidden="true" width="2000" height="1600" data-lb-img>
+        </div>
+        <figcaption class="lightbox-caption">
+          <span class="lightbox-text" data-lb-caption></span>
+          <span class="lightbox-count" data-lb-count></span>
+        </figcaption>
+      </figure>
+      <button class="lightbox-btn lightbox-next" type="button" aria-label="Next photo" data-lb-next>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+      <p class="visually-hidden" aria-live="polite" data-lb-live></p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <!-- Mascot peeking over the top edge of the footer -->
+    <div class="footer-mascot" aria-hidden="true">
+      <span class="footer-mascot-bubble">
+        <span class="footer-mascot-line footer-mascot-line--main" lang="vi">No Nê chưa?</span>
+        <span class="footer-mascot-line footer-mascot-line--sub" lang="en">Feeling No Nê?</span>
+        <span class="footer-mascot-line footer-mascot-line--sub" lang="fr">Bien mangé&#8239;?</span>
+      </span>
+      <div class="footer-mascot-clip">
+        <picture>
+          <source srcset="assets/images/logo/logo-mascot.webp" type="image/webp">
+          <img class="footer-mascot-img" src="assets/images/logo/logo-mascot.png" alt="" width="700" height="423" loading="lazy">
+        </picture>
+      </div>
+    </div>
+
+    <!-- Footer marquee; only the first phrase is read by screen readers -->
+    <div class="footer-marquee">
+      <div class="footer-marquee-track" data-footer-marquee>
+        <p class="footer-marquee-group">
+          <span class="footer-marquee-item">Come hungry. Leave <span lang="vi">No Nê</span>.</span>
+          <span class="footer-marquee-item" aria-hidden="true"><span class="footer-marquee-star">★</span>Come hungry. Leave <span lang="vi">No Nê</span>.</span>
+          <span class="footer-marquee-item" aria-hidden="true"><span class="footer-marquee-star">★</span>Come hungry. Leave <span lang="vi">No Nê</span>.</span>
+          <span aria-hidden="true"><span class="footer-marquee-star">★</span></span>
+        </p>
+        <p class="footer-marquee-group" aria-hidden="true">
+          <span class="footer-marquee-item">Come hungry. Leave <span lang="vi">No Nê</span>.</span>
+          <span class="footer-marquee-item"><span class="footer-marquee-star">★</span>Come hungry. Leave <span lang="vi">No Nê</span>.</span>
+          <span class="footer-marquee-item"><span class="footer-marquee-star">★</span>Come hungry. Leave <span lang="vi">No Nê</span>.</span>
+          <span><span class="footer-marquee-star">★</span></span>
+        </p>
+      </div>
+    </div>
+
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo logo--footer" href="index.html" aria-label="No Nê Kitchen &amp; Bar, home">
+          <picture>
+            <source srcset="assets/images/logo/logo-badge.webp" type="image/webp">
+            <img class="logo-img" src="assets/images/logo/logo-badge.png" alt="No Nê Kitchen &amp; Bar" width="900" height="1013" loading="lazy">
+          </picture>
+        </a>
+
+        <p class="footer-tagline">The feeling of being completely satisfied after a good meal.</p>
+
+        <ul class="social-list">
+          <li>
+            <a class="social-link" href="https://www.instagram.com/nonekitchenandbar/" target="_blank" rel="noopener" aria-label="Instagram (opens in a new tab)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false">
+                <rect x="3" y="3" width="18" height="18" rx="5"/>
+                <circle cx="12" cy="12" r="4.2"/>
+                <circle cx="17.4" cy="6.6" r="0.9" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="social-link" href="https://www.facebook.com/61590321897593/" target="_blank" rel="noopener" aria-label="Facebook (opens in a new tab)">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M13.5 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H7.9v3h2.6V21h3z"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="social-link" href="https://www.tiktok.com/@nonekitchenandbar" target="_blank" rel="noopener" aria-label="TikTok (opens in a new tab)">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M16.6 3c.3 2.2 1.6 3.7 3.9 3.9v3.1c-1.4.1-2.7-.3-3.9-1.1v5.9c0 3.4-2.5 5.9-5.8 5.9-3.1 0-5.6-2.5-5.6-5.6 0-3.4 2.9-6 6.4-5.5v3.2c-1.6-.4-3.2.7-3.2 2.3 0 1.4 1.1 2.4 2.4 2.4 1.5 0 2.6-1.1 2.6-2.8V3h3.2z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <nav class="footer-col" aria-labelledby="footer-nav-heading">
+        <h2 class="footer-heading" id="footer-nav-heading">Navigate</h2>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="our-story.html">Our Story</a></li>
+          <li><a href="catering.html">Catering</a></li>
+          <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Visit Us</h2>
+        <address class="footer-contact">
+          <p>
+            <span class="footer-contact-label">Address</span>
+            867 Denman Street<br>Vancouver, BC V6G 2L9
+          </p>
+          <p>
+            <span class="footer-contact-label">Phone</span>
+            <a href="tel:+16046320022">(604) 632-0022</a>
+          </p>
+          <p>
+            <span class="footer-contact-label">Email</span>
+            <a href="mailto:nonekitchenandbar@gmail.com">nonekitchenandbar@gmail.com</a>
+          </p>
+          <p>
+            <span class="footer-contact-label">Hours</span>
+            <span class="hours-lines" data-hours>
+              <span class="hours-line">Mon–Thu · <span class="hours-time">11:00 AM – 9:00 PM</span></span>
+              <span class="hours-line">Fri–Sun · <span class="hours-time">11:00 AM – 10:00 PM</span></span>
+            </span>
+            <span class="hours-status" data-hours-status hidden></span>
+          </p>
+        </address>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 No Nê Kitchen &amp; Bar. All rights reserved.</p>
+        <p class="footer-motto">Come hungry. Leave <span lang="vi">No Nê</span>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Reservation popup -->
+  <div class="modal" id="reservation-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-reservation></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="reservation-title" aria-describedby="reservation-desc" tabindex="-1">
+      <button class="modal-close" type="button" aria-label="Close reservation popup" data-close-reservation>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false">
+          <path d="M5 5l14 14M19 5L5 19"/>
+        </svg>
+      </button>
+
+      <span class="eyebrow">Reservations</span>
+      <h2 class="modal-title" id="reservation-title">Book Your Table</h2>
+      <p class="modal-text" id="reservation-desc">We take reservations by phone. Give us a call and we'll save you a seat.</p>
+
+      <a class="modal-phone" href="tel:+16046320022">(604) 632-0022</a>
+
+      <div class="modal-actions">
+        <a class="btn btn-primary" href="tel:+16046320022">Call Now</a>
+        <button class="btn btn-outline" type="button" data-copy-phone="(604) 632-0022">
+          <span data-copy-label>Copy Number</span>
+        </button>
+      </div>
+      <p class="visually-hidden" role="status" aria-live="polite" data-copy-status></p>
+
+      <div class="modal-note">
+        <span class="visually-hidden">Hours: </span>
+        <span class="hours-lines" data-hours>
+          <span class="hours-line">Mon–Thu · <span class="hours-time">11:00 AM – 9:00 PM</span></span>
+          <span class="hours-line">Fri–Sun · <span class="hours-time">11:00 AM – 10:00 PM</span></span>
+        </span>
+        <span class="hours-status" data-hours-status hidden></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky call bar (mobile only) -->
+  <div class="call-bar" data-call-bar>
+    <a class="btn btn-primary call-bar-btn" href="tel:+16046320022">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M6.6 3.5h2.8l1.4 4.1-2 1.4a12 12 0 0 0 6.2 6.2l1.4-2 4.1 1.4v2.8a2 2 0 0 1-2.2 2C10.5 18.8 5.2 13.5 4.6 5.7a2 2 0 0 1 2-2.2z"/>
+      </svg>
+      Call to Reserve · (604) 632-0022
+    </a>
+  </div>
+
+  <!-- Animation libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+</body>
+</html>

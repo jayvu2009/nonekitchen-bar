@@ -3,14 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Our Story | No Nê Kitchen &amp; Bar | Vancouver</title>
-  <meta name="description" content="The story behind No Nê Kitchen &amp; Bar: a little piece of old Hanoi and the bao cấp era, brought to 867 Denman Street, Vancouver. Come hungry. Leave No Nê.">
+  <title>Our Story | Bao Cấp-Era Hanoi Dining | No Nê Kitchen &amp; Bar</title>
+  <meta name="description" content="The story of No Nê Kitchen &amp; Bar, a Hanoi Vietnamese restaurant in Vancouver&#x27;s West End inspired by the bao cấp era. Come hungry. Leave No Nê.">
+  <link rel="canonical" href="https://example.com/our-story.html">
+  <meta name="theme-color" content="#005557">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="No Nê Kitchen &amp; Bar">
-  <meta property="og:title" content="Our Story | No Nê Kitchen &amp; Bar">
-  <meta property="og:description" content="They eat to remember. A little piece of old Hanoi, brought to Vancouver.">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:title" content="Our Story | Bao Cấp-Era Hanoi Dining | No Nê Kitchen &amp; Bar">
+  <meta property="og:description" content="The story of No Nê Kitchen &amp; Bar, a Hanoi Vietnamese restaurant in Vancouver&#x27;s West End inspired by the bao cấp era. Come hungry. Leave No Nê.">
+  <meta property="og:url" content="https://example.com/our-story.html">
+  <meta property="og:image" content="https://example.com/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The No Nê mascot poster and a bao cấp-era mural on the wall at No Nê Kitchen &amp; Bar">
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Our Story | Bao Cấp-Era Hanoi Dining | No Nê Kitchen &amp; Bar">
+  <meta name="twitter:description" content="The story of No Nê Kitchen &amp; Bar, a Hanoi Vietnamese restaurant in Vancouver&#x27;s West End inspired by the bao cấp era. Come hungry. Leave No Nê.">
+  <meta name="twitter:image" content="https://example.com/assets/images/og-image.jpg">
+  <meta name="twitter:image:alt" content="The No Nê mascot poster and a bao cấp-era mural on the wall at No Nê Kitchen &amp; Bar">
 
   <!-- Favicon -->
   <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/logo/favicon.webp">
@@ -31,6 +46,33 @@
 
   <!-- Preload hero image -->
   <link rel="preload" as="image" href="assets/images/interior/mural-street.jpg">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://example.com/our-story.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://example.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Our Story",
+            "item": "https://example.com/our-story.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="story-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -590,7 +632,11 @@
           </p>
           <p>
             <span class="footer-contact-label">Hours</span>
-            Please call for today's hours
+            <span class="hours-lines" data-hours>
+              <span class="hours-line">Mon–Thu · <span class="hours-time">11:00 AM – 9:00 PM</span></span>
+              <span class="hours-line">Fri–Sun · <span class="hours-time">11:00 AM – 10:00 PM</span></span>
+            </span>
+            <span class="hours-status" data-hours-status hidden></span>
           </p>
         </address>
       </div>
@@ -628,7 +674,14 @@
       </div>
       <p class="visually-hidden" role="status" aria-live="polite" data-copy-status></p>
 
-      <p class="modal-note">Hours: please call to confirm today's hours.</p>
+      <div class="modal-note">
+        <span class="visually-hidden">Hours: </span>
+        <span class="hours-lines" data-hours>
+          <span class="hours-line">Mon–Thu · <span class="hours-time">11:00 AM – 9:00 PM</span></span>
+          <span class="hours-line">Fri–Sun · <span class="hours-time">11:00 AM – 10:00 PM</span></span>
+        </span>
+        <span class="hours-status" data-hours-status hidden></span>
+      </div>
     </div>
   </div>
 

@@ -1,0 +1,5 @@
+# All crawlers may index the whole site
+User-agent: *
+Allow: /
+
+Sitemap: https://example.com/sitemap.xml

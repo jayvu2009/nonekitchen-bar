@@ -3,14 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>No Nê Kitchen &amp; Bar | Hanoi Comfort Food in Vancouver</title>
-  <meta name="description" content="No Nê Kitchen &amp; Bar serves Hanoi-style comfort food in a nostalgic bao cấp setting on Denman Street, Vancouver. Come hungry. Leave No Nê.">
+  <title>No Nê Kitchen &amp; Bar | Hanoi Vietnamese Restaurant on Denman St</title>
+  <meta name="description" content="No Nê Kitchen &amp; Bar is a Hanoi-style Vietnamese restaurant on Denman Street in Vancouver&#x27;s West End, serving pho, bun cha and Hanoi street food.">
+  <link rel="canonical" href="https://example.com/">
+  <meta name="theme-color" content="#005557">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="No Nê Kitchen &amp; Bar">
-  <meta property="og:title" content="No Nê Kitchen &amp; Bar | Hanoi Comfort Food in Vancouver">
-  <meta property="og:description" content="Hanoi-style comfort food in a nostalgic bao cấp setting on Denman Street, Vancouver. Come hungry. Leave No Nê.">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:title" content="No Nê Kitchen &amp; Bar | Hanoi Vietnamese Restaurant on Denman St">
+  <meta property="og:description" content="No Nê Kitchen &amp; Bar is a Hanoi-style Vietnamese restaurant on Denman Street in Vancouver&#x27;s West End, serving pho, bun cha and Hanoi street food.">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:image" content="https://example.com/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The No Nê mascot poster and a bao cấp-era mural on the wall at No Nê Kitchen &amp; Bar">
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="No Nê Kitchen &amp; Bar | Hanoi Vietnamese Restaurant on Denman St">
+  <meta name="twitter:description" content="No Nê Kitchen &amp; Bar is a Hanoi-style Vietnamese restaurant on Denman Street in Vancouver&#x27;s West End, serving pho, bun cha and Hanoi street food.">
+  <meta name="twitter:image" content="https://example.com/assets/images/og-image.jpg">
+  <meta name="twitter:image:alt" content="The No Nê mascot poster and a bao cấp-era mural on the wall at No Nê Kitchen &amp; Bar">
 
   <!-- Favicon -->
   <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/logo/favicon.webp">
@@ -42,6 +57,79 @@
         if (!window.noNeTypewriterStarted) root.classList.remove("type-ready");
       }, 2500);
     })();
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Restaurant",
+        "@id": "https://example.com/#restaurant",
+        "name": "No Nê Kitchen & Bar",
+        "url": "https://example.com/",
+        "logo": "https://example.com/assets/images/logo/logo-badge.png",
+        "image": "https://example.com/assets/images/og-image.jpg",
+        "telephone": "+1-604-632-0022",
+        "email": "nonekitchenandbar@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "867 Denman Street",
+          "addressLocality": "Vancouver",
+          "addressRegion": "BC",
+          "postalCode": "V6G 2L9",
+          "addressCountry": "CA"
+        },
+        "servesCuisine": [
+          "Vietnamese",
+          "Hanoi street food"
+        ],
+        "acceptsReservations": true,
+        "hasMenu": "https://example.com/menu.html",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday"
+            ],
+            "opens": "11:00",
+            "closes": "21:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "11:00",
+            "closes": "22:00"
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/nonekitchenandbar/",
+          "https://www.facebook.com/61590321897593/",
+          "https://www.tiktok.com/@nonekitchenandbar"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://example.com/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://example.com/"
+          }
+        ]
+      }
+    ]
+  }
   </script>
 </head>
 <body class="has-hero">
@@ -496,7 +584,11 @@
               </div>
               <div class="visit-block">
                 <h3 class="visit-label">Hours</h3>
-                <p>Please call us for today's hours.</p>
+                <p class="hours-lines" data-hours>
+                  <span class="hours-line">Mon–Thu · <span class="hours-time">11:00 AM – 9:00 PM</span></span>
+                  <span class="hours-line">Fri–Sun · <span class="hours-time">11:00 AM – 10:00 PM</span></span>
+                </p>
+                <p><span class="hours-status" data-hours-status hidden></span></p>
               </div>
               <div class="visit-block">
                 <h3 class="visit-label">Location</h3>
@@ -634,7 +726,11 @@
           </p>
           <p>
             <span class="footer-contact-label">Hours</span>
-            Please call for today's hours
+            <span class="hours-lines" data-hours>
+              <span class="hours-line">Mon–Thu · <span class="hours-time">11:00 AM – 9:00 PM</span></span>
+              <span class="hours-line">Fri–Sun · <span class="hours-time">11:00 AM – 10:00 PM</span></span>
+            </span>
+            <span class="hours-status" data-hours-status hidden></span>
           </p>
         </address>
       </div>
@@ -672,7 +768,14 @@
       </div>
       <p class="visually-hidden" role="status" aria-live="polite" data-copy-status></p>
 
-      <p class="modal-note">Hours: please call to confirm today's hours.</p>
+      <div class="modal-note">
+        <span class="visually-hidden">Hours: </span>
+        <span class="hours-lines" data-hours>
+          <span class="hours-line">Mon–Thu · <span class="hours-time">11:00 AM – 9:00 PM</span></span>
+          <span class="hours-line">Fri–Sun · <span class="hours-time">11:00 AM – 10:00 PM</span></span>
+        </span>
+        <span class="hours-status" data-hours-status hidden></span>
+      </div>
     </div>
   </div>
 

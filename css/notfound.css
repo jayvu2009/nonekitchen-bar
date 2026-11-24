@@ -1,0 +1,54 @@
+/* 404 page */
+
+.notfound {
+  background-color: var(--color-cream-light);
+}
+
+.notfound-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 60vh;
+  justify-content: center;
+  text-align: center;
+}
+
+.notfound-mascot img {
+  width: 200px;
+  height: auto;
+  margin-bottom: var(--space-5);
+}
+
+.notfound-vi {
+  margin-top: var(--space-2);
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: var(--fs-md);
+  color: var(--color-primary-light);
+}
+
+.notfound-text {
+  margin-top: var(--space-4);
+  font-size: var(--fs-md);
+  color: var(--color-ink-muted);
+}
+
+.notfound-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+@media (max-width: 768px) {
+  .notfound-text {
+    font-size: 1rem;
+  }
+
+  .notfound-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+}

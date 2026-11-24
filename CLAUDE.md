@@ -31,4 +31,12 @@
   - keyboard focus and aria attributes
   - content visible without JavaScript
   - respect `prefers-reduced-motion`
-- **Indexing:** do not add `noindex` or `nofollow`.
+- **Indexing:** do not add `noindex` or `nofollow`. The only exception is `404.html`.
+
+## SEO
+
+- **Domain:** the base URL is `https://example.com`, a temporary placeholder kept as this one exact string. It appears in the canonical, Open Graph and Twitter tags, the JSON-LD, `robots.txt` and `sitemap.xml`. Before publishing, find and replace `https://example.com` with the real domain in every file.
+- **Sitemap:** every new page must be added to `sitemap.xml` with its full URL and a `lastmod` date.
+- **Head tags:** every page has a unique title ending in "No Nê Kitchen & Bar", a 140 to 160 character description, a canonical URL, theme-color, Open Graph and Twitter tags using `assets/images/og-image.jpg`, and a BreadcrumbList in its JSON-LD.
+- **Menu structured data:** the JSON-LD in `menu.html` is a copy of `assets/data/menu.json` (available and weekend-evening items only). Update it whenever menu items or prices change.
+- **Opening hours:** they live in `HOURS` in `js/main.js`, in the plain HTML fallback text on each page and in the Restaurant JSON-LD in `index.html`. Change all three together.

@@ -582,6 +582,49 @@
   color: var(--color-ink-muted);
 }
 
+/* Opening hours, one range per line, and the live open or closed status */
+.hours-line {
+  display: block;
+}
+
+.hours-time {
+  white-space: nowrap;
+}
+
+.hours-status {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.45em;
+  margin-top: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.hours-status[hidden] {
+  display: none;
+}
+
+.hours-status::before {
+  content: "";
+  flex: none;
+  align-self: flex-start;
+  margin-top: 0.42em;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.75);
+}
+
+.hours-status.is-closing::before {
+  background-color: var(--color-mustard);
+}
+
+.hours-status.is-closed::before {
+  background-color: var(--color-accent);
+}
+
 /* Lock page scroll while popup is open */
 body.is-locked {
   overflow: hidden;
